@@ -314,7 +314,85 @@ header { animation: fadeInDown 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
 .kl .testimonial-text { font-size: 0.9rem; font-style: italic; color: #CBD5E1; margin-bottom: 15px; }
 .kl .testimonial-author strong { display: block; font-size: 0.85rem; color: var(--primary-white); }
 .kl .testimonial-author span { font-size: 0.75rem; color: var(--text-muted); }
+/* ===== Por que escolher a K-Libra ===== */
+.kl .why-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+.kl .why-card {
+  background: #151515; border: 1px solid rgba(255,255,255,0.07); border-radius: 6px;
+  padding: 34px 30px; position: relative; overflow: hidden;
+  transition: border-color 0.35s ease, transform 0.35s cubic-bezier(0.22,1,0.36,1), background 0.35s ease;
+}
+.kl .why-card::before {
+  content: ''; position: absolute; left: 0; top: 0; width: 3px; height: 0;
+  background: var(--primary-orange); transition: height 0.4s cubic-bezier(0.22,1,0.36,1);
+}
+.kl .why-card:hover { transform: translateY(-4px); border-color: rgba(252,90,0,0.35); background: #181818; }
+.kl .why-card:hover::before { height: 100%; }
+.kl .why-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 18px; }
+.kl .why-num {
+  font-family: var(--font-main); font-weight: 900; font-style: italic; font-size: 1.6rem;
+  color: rgba(255,255,255,0.14); letter-spacing: -0.03em;
+}
+.kl .why-icon {
+  color: var(--primary-orange); font-size: 1.15rem; width: 42px; height: 42px;
+  display: flex; align-items: center; justify-content: center; border-radius: 4px;
+  background: rgba(252,90,0,0.08); border: 1px solid rgba(252,90,0,0.18);
+}
+.kl .why-card h3 { font-size: 1.15rem; color: var(--primary-white); margin-bottom: 10px; }
+.kl .why-card p { font-size: 0.92rem; color: #94A3B8; line-height: 1.6; }
+.kl .routes-block {
+  margin-top: 34px; background: linear-gradient(135deg, #131313 0%, #1a1a1a 100%);
+  border: 1px solid rgba(252,90,0,0.22); border-radius: 8px; padding: 48px 44px;
+  position: relative; overflow: hidden;
+}
+.kl .routes-block::after {
+  content: ''; position: absolute; right: -60px; top: -60px; width: 260px; height: 260px;
+  border: 1px solid rgba(252,90,0,0.10); border-radius: 50%; pointer-events: none;
+}
+.kl .routes-block::before {
+  content: ''; position: absolute; right: 10px; top: 10px; width: 140px; height: 140px;
+  border: 1px dashed rgba(252,90,0,0.10); border-radius: 50%; pointer-events: none;
+}
+.kl .routes-kicker {
+  display: inline-flex; align-items: center; gap: 8px; color: var(--primary-orange);
+  font-size: 0.72rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase;
+  margin-bottom: 14px;
+}
+.kl .routes-block h3 { font-size: 1.8rem; color: var(--primary-white); margin-bottom: 10px; }
+.kl .routes-block .routes-sub { color: #94A3B8; font-size: 1rem; margin-bottom: 28px; }
+.kl .cities-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px 26px; list-style: none;
+  position: relative; z-index: 1;
+}
+.kl .cities-grid li {
+  display: flex; align-items: center; gap: 10px; font-size: 0.9rem; color: #CBD5E1;
+  padding: 7px 0; border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+.kl .cities-grid li i { color: var(--primary-orange); font-size: 0.62rem; }
+.kl .offroute {
+  margin-top: 34px; padding-top: 28px; border-top: 1px solid rgba(255,255,255,0.08);
+  display: flex; gap: 18px; align-items: flex-start; position: relative; z-index: 1;
+}
+.kl .offroute-icon {
+  flex: 0 0 auto; width: 46px; height: 46px; border-radius: 4px; display: flex;
+  align-items: center; justify-content: center; background: rgba(252,90,0,0.10);
+  border: 1px solid rgba(252,90,0,0.28); color: var(--primary-orange); font-size: 1.1rem;
+}
+.kl .offroute h4 { font-size: 1.05rem; color: var(--primary-orange); margin-bottom: 6px; }
+.kl .offroute p { font-size: 0.95rem; color: #CBD5E1; }
+@media (max-width: 900px) {
+  .kl .cities-grid { grid-template-columns: repeat(2, 1fr); gap: 6px 20px; }
+  .kl .routes-block { padding: 34px 24px; }
+  .kl .routes-block h3 { font-size: 1.4rem; }
+}
+@media (max-width: 640px) {
+  .kl .why-grid { grid-template-columns: 1fr; gap: 16px; }
+  .kl .why-card { padding: 24px 20px; }
+  .kl .why-num { font-size: 1.3rem; }
+  .kl .cities-grid li { font-size: 0.82rem; padding: 6px 0; }
+  .kl .offroute { gap: 14px; }
+}
 .kl .authority-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+
 .kl .authority-card {
   background: var(--primary-white); padding: 35px 25px; border-radius: 4px;
   border: 1px solid var(--border-color); border-left: 4px solid var(--primary-orange);
@@ -690,50 +768,82 @@ function Index() {
       <section className="section-padding bg-dark">
         <div className="container">
           <div className="section-header text-center animate-on-scroll animate-fade-in-up">
-            <h2>POR QUE REVENDAS CONFIAM NA K-LIBRA</h2>
-            <p>Operação estruturada, atendimento exclusivo para CNPJ e entrega no prazo para manter seu estoque girando.</p>
+            <h2>POR QUE ESCOLHER A K-LIBRA?</h2>
+            <p>Uma operação pensada para quem precisa de agilidade, abastecimento e um fornecedor que entende o mercado.</p>
           </div>
 
-          <div className="authority-grid">
-            <div className="authority-card animate-on-scroll animate-fade-in-up stagger-1">
-              <div className="number">+1000</div>
-              <h3>CLIENTES ATENDIDOS</h3>
-              <p>Revendas, oficinas e borracharias abastecidas pela nossa distribuição.</p>
+          <div className="why-grid">
+            <div className="why-card animate-on-scroll animate-fade-in-up stagger-1">
+              <div className="why-top">
+                <span className="why-num">01</span>
+                <span className="why-icon"><i className="fa-solid fa-briefcase"></i></span>
+              </div>
+              <h3>FOCO 100% B2B</h3>
+              <p>Atendimento voltado para empresas, revendedores, borracharias e profissionais do setor.</p>
             </div>
-            <div className="authority-card animate-on-scroll animate-fade-in-up stagger-2">
-              <div className="number">100%</div>
-              <h3>FOCO EM CNPJ</h3>
-              <p>Atendimento estritamente B2B: o consumidor final não concorre com você.</p>
-            </div>
-            <div className="authority-card animate-on-scroll animate-fade-in-up stagger-3">
-              <div className="number">24/48h</div>
+            <div className="why-card animate-on-scroll animate-fade-in-up stagger-2">
+              <div className="why-top">
+                <span className="why-num">02</span>
+                <span className="why-icon"><i className="fa-solid fa-truck-fast"></i></span>
+              </div>
               <h3>DESPACHO ÁGIL</h3>
-              <p>Pedidos processados rápido para sua loja nunca perder venda por falta.</p>
+              <p>Pedidos processados com agilidade para ajudar seu negócio a manter o estoque abastecido.</p>
+            </div>
+            <div className="why-card animate-on-scroll animate-fade-in-up stagger-3">
+              <div className="why-top">
+                <span className="why-num">03</span>
+                <span className="why-icon"><i className="fa-solid fa-business-time"></i></span>
+              </div>
+              <h3>DESDE 2022</h3>
+              <p>Atuação no mercado B2B com foco em distribuição e relacionamento comercial.</p>
+            </div>
+            <div className="why-card animate-on-scroll animate-fade-in-up stagger-4">
+              <div className="why-top">
+                <span className="why-num">04</span>
+                <span className="why-icon"><i className="fa-solid fa-map-location-dot"></i></span>
+              </div>
+              <h3>ATUAÇÃO NA BAHIA</h3>
+              <p>Atendimento e distribuição para diferentes regiões do estado.</p>
             </div>
           </div>
 
-          <div className="institutional-data-container" style={{ marginTop: 40, marginBottom: 0 }}>
-            <div className="stat-card animate-on-scroll animate-fade-in-up stagger-1">
-              <div className="stat-icon"><i className="fa-solid fa-business-time"></i></div>
-              <div className="stat-number">Desde 2022</div>
-              <div className="stat-label">Atuação no mercado B2B</div>
-            </div>
-            <div className="stat-card animate-on-scroll animate-fade-in-up stagger-2">
-              <div className="stat-icon"><i className="fa-solid fa-map-pin"></i></div>
-              <div className="stat-number">Bahia</div>
-              <div className="stat-label">Rotas próprias e entrega em todo o estado</div>
-            </div>
-            <div className="testimonial-card animate-on-scroll animate-fade-in-up stagger-3">
-              <div className="quote-icon"><i className="fa-solid fa-quote-left"></i></div>
-              <p className="testimonial-text">"A pontualidade nas entregas e a constância no estoque facilitam muito o nosso giro semanal. Um parceiro B2B de extrema confiança."</p>
-              <div className="testimonial-author">
-                <strong>— Carlos Eduardo</strong>
-                <span>Gerente de Compras</span>
+          <div className="routes-block animate-on-scroll animate-fade-in-up">
+            <span className="routes-kicker"><i className="fa-solid fa-route"></i> Cobertura em rota</span>
+            <h3>ROTAS NO OESTE DA BAHIA</h3>
+            <p className="routes-sub">Atendimento em rota para cidades do Oeste Baiano.</p>
+            <ul className="cities-grid">
+              {[
+                "Luís Eduardo Magalhães",
+                "Barreiras",
+                "São Desidério",
+                "Formosa do Rio Preto",
+                "Riachão das Neves",
+                "Cristópolis",
+                "Cotegipe",
+                "Wanderley",
+                "Santa Rita de Cássia",
+                "Correntina",
+                "Santa Maria da Vitória",
+                "Santana",
+                "São Félix do Coribe",
+                "Serra Dourada",
+                "Coribe",
+              ].map((city) => (
+                <li key={city}><i className="fa-solid fa-location-dot"></i>{city}</li>
+              ))}
+            </ul>
+
+            <div className="offroute">
+              <span className="offroute-icon"><i className="fa-solid fa-box-open"></i></span>
+              <div>
+                <h4>NÃO ESTÁ NA NOSSA ROTA?</h4>
+                <p>Também realizamos envios e despachos para qualquer cidade da Bahia.</p>
               </div>
             </div>
           </div>
         </div>
       </section>
+
 
       <section className="section-padding bg-dark" id="formulario" style={{ borderTop: "2px solid var(--primary-orange)" }}>
         <div className="container">
