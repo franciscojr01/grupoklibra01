@@ -532,29 +532,29 @@ function Index() {
           <div className="products-grid">
             <div className="product-category-card animate-on-scroll animate-scale-in stagger-1">
               <div className="product-img-wrapper">
-                <img src="https://i.ibb.co/XZWgYv1m/60140c5a-8d30-4b82-9441-f61f7f8e0f3d.png" alt="Pneus de moto de alta qualidade para revenda" loading="lazy" />
+                <img src="https://i.ibb.co/XZWgYv1m/60140c5a-8d30-4b82-9441-f61f7f8e0f3d.png" alt="Pneus de moto de alta qualidade para revenda" loading="lazy" style={{ objectPosition: "35% center" }} />
               </div>
               <div className="product-card-body">
                 <div>
                   <h3>PNEUS DE MOTO</h3>
-                  <p>Linha completa para street, trail e entrega, com alta durabilidade e aderência no piso seco e molhado.</p>
+                  <p>Linha completa para motos urbanas e de uso misto, com excelente aderência, durabilidade e desempenho.</p>
                 </div>
                 <ul className="product-list">
-                  <li><i className="fa-solid fa-chevron-right"></i> Medidas urbanas de alto giro</li>
-                  <li><i className="fa-solid fa-chevron-right"></i> Reforçados para carga e moto-frete</li>
-                  <li><i className="fa-solid fa-chevron-right"></i> Opções para uso On/Off Road</li>
+                  <li><i className="fa-solid fa-chevron-right"></i> Medidas para motos street e trail</li>
+                  <li><i className="fa-solid fa-chevron-right"></i> Opções para uso urbano e misto</li>
+                  <li><i className="fa-solid fa-chevron-right"></i> Excelente aderência e durabilidade</li>
                 </ul>
               </div>
             </div>
 
             <div className="product-category-card animate-on-scroll animate-scale-in stagger-2">
               <div className="product-img-wrapper">
-                <img src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=600&q=80" alt="Câmaras de ar reforçadas" loading="lazy" />
+                <img src="https://i.ibb.co/xKs2sG7r/Chat-GPT-Image-6-de-set-de-2026-22-19-50.png" alt="Câmaras de ar agrícolas, automotivas e rodoviárias" loading="lazy" />
               </div>
               <div className="product-card-body">
                 <div>
                   <h3>CÂMARAS DE AR</h3>
-                  <p>Câmaras automotivas e industriais com alta retenção de ar e grande resistência a perfurações.</p>
+                  <p>Câmaras de ar agrícolas, automotivas e rodoviárias. Trabalhamos com as marcas mais reconhecidas do mercado, Tortuga e Pegasus.</p>
                 </div>
                 <ul className="product-list">
                   <li><i className="fa-solid fa-chevron-right"></i> Câmaras de ar agrícolas</li>
@@ -567,24 +567,24 @@ function Index() {
 
             <div className="product-category-card animate-on-scroll animate-scale-in stagger-3">
               <div className="product-img-wrapper">
-                <img src="https://images.unsplash.com/photo-1486006920555-c77dce18193b?auto=format&fit=crop&w=600&q=80" alt="Produtos de reparo e vulcanização" loading="lazy" />
+                <img src="https://i.ibb.co/mCxnnsZJ/image.png" alt="Insumos para reparos e vulcanização de pneus" loading="lazy" />
               </div>
               <div className="product-card-body">
                 <div>
                   <h3>REPAROS &amp; VULCANIZAÇÃO</h3>
-                  <p>Insumos essenciais para borracharias e autocenters, com soluções para vulcanização a frio e a quente.</p>
+                  <p>Insumos e materiais para reparos e vulcanização de pneus, com soluções práticas para diferentes tipos de conserto.</p>
                 </div>
                 <ul className="product-list">
-                  <li><i className="fa-solid fa-chevron-right"></i> Remendos a frio e manchetes</li>
-                  <li><i className="fa-solid fa-chevron-right"></i> Cimentos vulcanizantes e colas</li>
-                  <li><i className="fa-solid fa-chevron-right"></i> Macarrões e plaquetas de reparo</li>
+                  <li><i className="fa-solid fa-chevron-right"></i> Remendos a frio e manchões</li>
+                  <li><i className="fa-solid fa-chevron-right"></i> Cimentos e colas para vulcanização</li>
+                  <li><i className="fa-solid fa-chevron-right"></i> Macarrões e materiais para reparo</li>
                 </ul>
               </div>
             </div>
 
             <div className="product-category-card animate-on-scroll animate-scale-in stagger-4">
               <div className="product-img-wrapper">
-                <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80" alt="Ferramentas e acessórios profissionais" loading="lazy" />
+                <img src="https://i.ibb.co/PvmxMyN4/Chat-GPT-Image-6-de-set-de-2026-22-08-40.png" alt="Ferramentas e acessórios profissionais" loading="lazy" />
               </div>
               <div className="product-card-body">
                 <div>
