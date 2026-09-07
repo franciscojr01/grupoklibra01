@@ -210,28 +210,35 @@ header { animation: fadeInDown 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
   width: 100%; height: 400px; object-fit: cover; border-radius: 4px;
   box-shadow: 0 20px 25px -5px rgba(0,0,0,0.2); border-left: 6px solid var(--primary-orange);
 }
-.kl .brands-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 25px; margin-top: 40px; }
+.kl .brands-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 28px; margin-top: 48px; }
 .kl .brand-item {
-  background: var(--primary-white); padding: 30px 20px; border: 1px solid var(--border-color);
-  border-radius: 4px; display: flex; flex-direction: column; align-items: center;
-  justify-content: center; text-align: center; transition: all 0.3s ease;
-  border-bottom: 3px solid transparent;
+  background: var(--primary-white); padding: 34px 26px 30px; border: 1px solid var(--border-color);
+  border-radius: 14px; display: flex; flex-direction: column; align-items: center;
+  justify-content: flex-start; text-align: center;
+  transition: transform 0.35s cubic-bezier(0.22,1,0.36,1), box-shadow 0.35s ease, border-color 0.35s ease;
+  box-shadow: 0 1px 2px rgba(12,12,12,0.04), 0 10px 24px -18px rgba(12,12,12,0.35);
 }
 .kl .brand-item:hover {
-  border-bottom-color: var(--primary-orange); transform: translateY(-4px);
-  box-shadow: 0 12px 20px -3px rgba(0, 0, 0, 0.08);
+  transform: translateY(-8px); border-color: rgba(252, 90, 0, 0.35);
+  box-shadow: 0 18px 40px -20px rgba(12, 12, 12, 0.35);
 }
-.kl .brand-logo-img { max-width: 140px; height: auto; max-height: 60px; object-fit: contain; margin-bottom: 12px; }
+.kl .brand-logo-box {
+  width: 100%; height: 92px; display: flex; align-items: center; justify-content: center;
+  margin-bottom: 18px;
+}
+.kl .brand-logo-img { max-width: 170px; max-height: 88px; width: auto; height: auto; object-fit: contain; }
 .kl .brand-name {
-  font-family: var(--font-main); font-weight: 900; font-style: italic; font-size: 1.4rem;
-  color: var(--primary-black); letter-spacing: 0.05em; margin-bottom: 8px;
+  font-family: var(--font-main); font-weight: 900; font-style: italic; font-size: 1.5rem;
+  color: var(--primary-black); letter-spacing: 0.04em;
 }
 .kl .brand-tag {
   display: inline-block; background: rgba(252, 90, 0, 0.1); color: var(--primary-orange);
-  font-size: 0.75rem; font-weight: 800; padding: 3px 10px; border-radius: 20px;
-  text-transform: uppercase; margin-bottom: 12px;
+  font-size: 0.7rem; font-weight: 800; padding: 6px 14px; border-radius: 999px;
+  text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 14px;
+  border: 1px solid rgba(252, 90, 0, 0.2);
 }
-.kl .brand-desc { font-size: 0.85rem; color: var(--text-muted); line-height: 1.4; }
+.kl .brand-desc { font-size: 0.9rem; color: var(--text-muted); line-height: 1.55; }
+
 .kl .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px; margin-bottom: 40px; }
 .kl .product-category-card {
   background: var(--primary-white); border: 1px solid var(--border-color); border-radius: 4px;
