@@ -651,7 +651,7 @@ function Index() {
             <ul className="nav-links">
               <li><a href="#produtos">Produtos</a></li>
               <li><a href="#marcas">Marcas Parceiras</a></li>
-              <li><a href="#sobre">A K-Libra</a></li>
+              <li><a href="#porque">A K-Libra</a></li>
               <li><a href="#formulario">Contato</a></li>
             </ul>
           </nav>
@@ -670,7 +670,7 @@ function Index() {
           <ul className={`mobile-menu${menuOpen ? " open" : ""}`}>
             <li><a href="#produtos" onClick={() => setMenuOpen(false)}>Produtos</a></li>
             <li><a href="#marcas" onClick={() => setMenuOpen(false)}>Marcas Parceiras</a></li>
-            <li><a href="#sobre" onClick={() => setMenuOpen(false)}>A K-Libra</a></li>
+            <li><a href="#porque" onClick={() => setMenuOpen(false)}>A K-Libra</a></li>
             <li><a href="#formulario" onClick={() => setMenuOpen(false)}>Contato</a></li>
           </ul>
         </div>
@@ -779,7 +779,7 @@ function Index() {
             </div>
           </div>
 
-          <a href="#formulario" className="btn btn-primary animate-on-scroll animate-fade-in-up"><span className="graphic-arrows">&gt;&gt;</span> Solicitar Tabela de Preços B2B</a>
+          <a href="#formulario" className="btn btn-green animate-on-scroll animate-fade-in-up">Solicitar Tabela de Preços B2B</a>
         </div>
       </section>
 
@@ -799,7 +799,7 @@ function Index() {
         </div>
       </section>
 
-      <section className="section-padding bg-dark">
+      <section id="porque" className="section-padding bg-dark">
         <div className="container">
           <div className="section-header text-center animate-on-scroll animate-fade-in-up">
             <h2>POR QUE ESCOLHER A K-LIBRA?</h2>
