@@ -222,11 +222,12 @@ header { animation: fadeInDown 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
   width: 100%; height: 400px; object-fit: cover; border-radius: 4px;
   box-shadow: 0 20px 25px -5px rgba(0,0,0,0.2); border-left: 6px solid var(--primary-orange);
 }
-.kl .brands-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(420px, 1fr)); gap: 26px; margin-top: 52px; }
+.kl .brands-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 52px; }
 .kl .brand-item {
-  background: var(--primary-white); padding: 22px; border: 1px solid var(--border-color);
-  border-radius: 20px; display: grid; grid-template-columns: 190px 1fr; gap: 24px;
-  align-items: center; text-align: left; overflow: hidden; position: relative;
+  background: var(--primary-white); border: 1px solid var(--border-color);
+  border-radius: 20px; overflow: hidden; position: relative;
+  display: grid; grid-template-columns: 40% 60%; align-items: stretch;
+  min-height: 210px;
   transition: transform 0.35s cubic-bezier(0.22,1,0.36,1), box-shadow 0.35s ease, border-color 0.35s ease;
   box-shadow: 0 1px 2px rgba(12,12,12,0.04), 0 12px 30px -22px rgba(12,12,12,0.45);
 }
@@ -240,35 +241,41 @@ header { animation: fadeInDown 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
   box-shadow: 0 22px 46px -22px rgba(12, 12, 12, 0.4);
 }
 .kl .brand-logo-box {
-  width: 100%; height: 150px; display: flex; align-items: center; justify-content: center;
-  padding: 16px; border-radius: 16px;
+  width: 100%; height: 100%; min-height: 180px;
+  display: flex; align-items: center; justify-content: center;
+  padding: 24px;
   background: linear-gradient(150deg, #FFFFFF 0%, #EEF2F7 100%);
-  border: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color);
 }
 .kl .brand-item:hover .brand-logo-img { transform: scale(1.06); }
 .kl .brand-logo-img {
-  max-width: 100%; max-height: 118px; width: auto; height: auto; object-fit: contain;
+  max-width: 100%; max-height: 130px; width: auto; height: auto; object-fit: contain;
   transition: transform 0.35s cubic-bezier(0.22,1,0.36,1);
 }
-.kl .brand-name {
+.kl .brand-fallback {
   font-family: var(--font-main); font-weight: 900; font-style: italic; font-size: 1.5rem;
-  color: var(--primary-black); letter-spacing: 0.04em;
+  color: var(--primary-black); letter-spacing: 0.04em; text-transform: uppercase;
 }
-.kl .brand-body { display: flex; flex-direction: column; gap: 10px; }
-.kl .brand-title {
-  font-family: var(--font-main); font-weight: 900; font-style: italic; font-size: 1.35rem;
-  color: var(--primary-black); letter-spacing: 0.03em; text-transform: uppercase; margin: 0;
+.kl .brand-body {
+  display: flex; flex-direction: column; justify-content: center;
+  gap: 14px; padding: 28px 30px; text-align: left;
 }
 .kl .brand-tag {
   align-self: flex-start; background: rgba(252, 90, 0, 0.1); color: var(--primary-orange);
-  font-size: 0.68rem; font-weight: 800; padding: 6px 14px; border-radius: 999px;
+  font-size: 0.7rem; font-weight: 800; padding: 7px 16px; border-radius: 999px;
   text-transform: uppercase; letter-spacing: 0.08em;
   border: 1px solid rgba(252, 90, 0, 0.2);
 }
-.kl .brand-desc { font-size: 0.92rem; color: var(--text-muted); line-height: 1.6; margin: 0; }
-@media (max-width: 640px) {
+.kl .brand-desc { font-size: 0.95rem; color: var(--text-muted); line-height: 1.6; margin: 0; }
+@media (max-width: 768px) {
   .kl .brands-grid { grid-template-columns: 1fr; }
-  .kl .brand-item { grid-template-columns: 1fr; text-align: center; }
+  .kl .brand-item { grid-template-columns: 1fr; text-align: center; min-height: auto; }
+  .kl .brand-logo-box {
+    min-height: 150px; border-right: none; border-bottom: 1px solid var(--border-color);
+    padding: 28px;
+  }
+  .kl .brand-logo-img { max-height: 110px; }
+  .kl .brand-body { padding: 24px; text-align: center; align-items: center; gap: 12px; }
   .kl .brand-tag { align-self: center; }
 }
 
