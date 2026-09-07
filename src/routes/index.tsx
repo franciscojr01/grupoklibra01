@@ -710,6 +710,32 @@ function Index() {
         </div>
       </section>
 
+      <section className="section-padding pain-section">
+        <div className="container">
+          <h2 className="pain-heading animate-on-scroll animate-fade-in-up">
+            Você está perdendo dinheiro para a internet<br />
+            <span>OU PARA O CONCORRENTE VIZINHO?</span>
+          </h2>
+          <div className="pain-grid">
+            <div className="pain-card animate-on-scroll animate-fade-in-up stagger-1">
+              <i className="fa-solid fa-xmark pain-icon"></i>
+              <h3>Falta de Estoque<br />na Safra:</h3>
+              <p>Esperar 15 dias por um distribuidor nacional custa clientes.</p>
+            </div>
+            <div className="pain-card animate-on-scroll animate-fade-in-up stagger-2">
+              <i className="fa-solid fa-xmark pain-icon"></i>
+              <h3>Guerra de Preços:</h3>
+              <p>É impossível lucrar se você compra mais caro que o preço do Mercado Livre.</p>
+            </div>
+            <div className="pain-card animate-on-scroll animate-fade-in-up stagger-3">
+              <i className="fa-solid fa-xmark pain-icon"></i>
+              <h3>Retornos e<br />Garantia:</h3>
+              <p>Vender produtos sem procedência gera dor de cabeça com o produtor rural.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="produtos" className="section-padding bg-dark">
         <div className="container text-center">
           <div className="section-header animate-on-scroll animate-fade-in-up">
