@@ -218,11 +218,11 @@ header { animation: fadeInDown 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
   width: 100%; height: 400px; object-fit: cover; border-radius: 4px;
   box-shadow: 0 20px 25px -5px rgba(0,0,0,0.2); border-left: 6px solid var(--primary-orange);
 }
-.kl .brands-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 28px; margin-top: 48px; }
+.kl .brands-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px; margin-top: 52px; }
 .kl .brand-item {
-  background: var(--primary-white); padding: 34px 26px 30px; border: 1px solid var(--border-color);
-  border-radius: 14px; display: flex; flex-direction: column; align-items: center;
-  justify-content: flex-start; text-align: center;
+  background: var(--primary-white); padding: 24px 26px 30px; border: 1px solid var(--border-color);
+  border-radius: 18px; display: flex; flex-direction: column; align-items: center;
+  justify-content: flex-start; text-align: center; overflow: hidden;
   transition: transform 0.35s cubic-bezier(0.22,1,0.36,1), box-shadow 0.35s ease, border-color 0.35s ease;
   box-shadow: 0 1px 2px rgba(12,12,12,0.04), 0 10px 24px -18px rgba(12,12,12,0.35);
 }
@@ -231,10 +231,17 @@ header { animation: fadeInDown 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
   box-shadow: 0 18px 40px -20px rgba(12, 12, 12, 0.35);
 }
 .kl .brand-logo-box {
-  width: 100%; height: 92px; display: flex; align-items: center; justify-content: center;
-  margin-bottom: 18px;
+  width: 100%; height: 150px; display: flex; align-items: center; justify-content: center;
+  margin-bottom: 22px; padding: 18px 24px; border-radius: 14px;
+  background: linear-gradient(180deg, #FFFFFF 0%, #F1F5F9 100%);
+  border: 1px solid var(--border-color);
+  box-shadow: inset 0 -2px 0 rgba(252, 90, 0, 0.18);
 }
-.kl .brand-logo-img { max-width: 170px; max-height: 88px; width: auto; height: auto; object-fit: contain; }
+.kl .brand-item:hover .brand-logo-img { transform: scale(1.05); }
+.kl .brand-logo-img {
+  max-width: 100%; max-height: 112px; width: auto; height: auto; object-fit: contain;
+  transition: transform 0.35s cubic-bezier(0.22,1,0.36,1);
+}
 .kl .brand-name {
   font-family: var(--font-main); font-weight: 900; font-style: italic; font-size: 1.5rem;
   color: var(--primary-black); letter-spacing: 0.04em;
