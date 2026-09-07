@@ -1,6 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import logoPegasus from "@/assets/logo-pegasus.png";
 
 const css = `
 :root {
@@ -210,28 +209,35 @@ header { animation: fadeInDown 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
   width: 100%; height: 400px; object-fit: cover; border-radius: 4px;
   box-shadow: 0 20px 25px -5px rgba(0,0,0,0.2); border-left: 6px solid var(--primary-orange);
 }
-.kl .brands-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 25px; margin-top: 40px; }
+.kl .brands-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 28px; margin-top: 48px; }
 .kl .brand-item {
-  background: var(--primary-white); padding: 30px 20px; border: 1px solid var(--border-color);
-  border-radius: 4px; display: flex; flex-direction: column; align-items: center;
-  justify-content: center; text-align: center; transition: all 0.3s ease;
-  border-bottom: 3px solid transparent;
+  background: var(--primary-white); padding: 34px 26px 30px; border: 1px solid var(--border-color);
+  border-radius: 14px; display: flex; flex-direction: column; align-items: center;
+  justify-content: flex-start; text-align: center;
+  transition: transform 0.35s cubic-bezier(0.22,1,0.36,1), box-shadow 0.35s ease, border-color 0.35s ease;
+  box-shadow: 0 1px 2px rgba(12,12,12,0.04), 0 10px 24px -18px rgba(12,12,12,0.35);
 }
 .kl .brand-item:hover {
-  border-bottom-color: var(--primary-orange); transform: translateY(-4px);
-  box-shadow: 0 12px 20px -3px rgba(0, 0, 0, 0.08);
+  transform: translateY(-8px); border-color: rgba(252, 90, 0, 0.35);
+  box-shadow: 0 18px 40px -20px rgba(12, 12, 12, 0.35);
 }
-.kl .brand-logo-img { max-width: 140px; height: auto; max-height: 60px; object-fit: contain; margin-bottom: 12px; }
+.kl .brand-logo-box {
+  width: 100%; height: 92px; display: flex; align-items: center; justify-content: center;
+  margin-bottom: 18px;
+}
+.kl .brand-logo-img { max-width: 170px; max-height: 88px; width: auto; height: auto; object-fit: contain; }
 .kl .brand-name {
-  font-family: var(--font-main); font-weight: 900; font-style: italic; font-size: 1.4rem;
-  color: var(--primary-black); letter-spacing: 0.05em; margin-bottom: 8px;
+  font-family: var(--font-main); font-weight: 900; font-style: italic; font-size: 1.5rem;
+  color: var(--primary-black); letter-spacing: 0.04em;
 }
 .kl .brand-tag {
   display: inline-block; background: rgba(252, 90, 0, 0.1); color: var(--primary-orange);
-  font-size: 0.75rem; font-weight: 800; padding: 3px 10px; border-radius: 20px;
-  text-transform: uppercase; margin-bottom: 12px;
+  font-size: 0.7rem; font-weight: 800; padding: 6px 14px; border-radius: 999px;
+  text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 14px;
+  border: 1px solid rgba(252, 90, 0, 0.2);
 }
-.kl .brand-desc { font-size: 0.85rem; color: var(--text-muted); line-height: 1.4; }
+.kl .brand-desc { font-size: 0.9rem; color: var(--text-muted); line-height: 1.55; }
+
 .kl .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px; margin-bottom: 40px; }
 .kl .product-category-card {
   background: var(--primary-white); border: 1px solid var(--border-color); border-radius: 4px;
@@ -407,9 +413,66 @@ header { animation: fadeInDown 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
 
 `;
 
+const BRANDS = [
+  {
+    name: "PEGASUS",
+    logo: "https://i.ibb.co/VWKfj7Z0/Logotipo-logomarca-assess-rios-de-Luxo-2.png",
+    tag: "Câmaras de Ar",
+    desc: "Durabilidade, aderência e alto rendimento quilométrico para duas rodas.",
+  },
+  {
+    name: "TORTUGA",
+    logo: "https://i.ibb.co/HLKTR0CG/Logotipo-logomarca-assess-rios-de-Luxo-1.png",
+    tag: "Câmaras de Ar",
+    desc: "Liderança nacional em câmaras de ar reforçadas e protetores para veículos agrícolas, carga e utilitários.",
+  },
+  {
+    name: "VIPAL",
+    logo: "https://i.ibb.co/VYb7rwb5/Logotipo-logomarca-assess-rios-de-Luxo-5.png",
+    tag: "Reforma & Reparação",
+    desc: "Tecnologia global em produtos para recapagem, vulcanização e reparação de pneus.",
+  },
+  {
+    name: "VULCAFLEX",
+    logo: "https://i.ibb.co/m5hKtXx4/Logotipo-logomarca-assess-rios-de-Luxo-4.png",
+    tag: "Soluções de Reparo",
+    desc: "Especialista em manchões, remendos e insumos técnicos para reparação rápida e resistente.",
+  },
+  {
+    name: "FVA",
+    logo: "https://i.ibb.co/Z1xymGff/Logotipo-logomarca-assess-rios-de-Luxo-3.png",
+    tag: "Acessórios & Ferramentas",
+    desc: "Suprimentos, válvulas, pesos de balanceamento e ferramentas especializadas para autocenters e borracharias.",
+  },
+];
+
+function BrandCard({ brand, index }: { brand: (typeof BRANDS)[number]; index: number }) {
+  const [failed, setFailed] = useState(false);
+  return (
+    <div className={`brand-item animate-on-scroll animate-fade-in-up stagger-${index + 1}`}>
+      <div className="brand-logo-box">
+        {failed ? (
+          <span className="brand-name">{brand.name}</span>
+        ) : (
+          <img
+            src={brand.logo}
+            alt={`Logo ${brand.name}`}
+            className="brand-logo-img"
+            loading="lazy"
+            onError={() => setFailed(true)}
+          />
+        )}
+      </div>
+      <span className="brand-tag">{brand.tag}</span>
+      <p className="brand-desc">{brand.desc}</p>
+    </div>
+  );
+}
+
 const TITLE = "K-Libra | Distribuição B2B de Pneus, Câmaras e Reparação";
 const DESCRIPTION =
   "Distribuidora B2B parceira para revendas, borracharias e oficinas. Pneus, câmaras de ar e produtos de reparação com reposição ágil e blindagem de margem.";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -612,32 +675,11 @@ function Index() {
           </div>
 
           <div className="brands-grid">
-            <div className="brand-item animate-on-scroll animate-fade-in-up stagger-1">
-              <img src={logoPegasus} alt="Logo Pegasus" className="brand-logo-img" loading="lazy" />
-              <span className="brand-tag">Pneus de Moto</span>
-              <p className="brand-desc">Durabilidade, aderência e alto rendimento quilométrico para duas rodas.</p>
-            </div>
-            <div className="brand-item animate-on-scroll animate-fade-in-up stagger-2">
-              <span className="brand-name">TORTUGA</span>
-              <span className="brand-tag">Câmaras de Ar</span>
-              <p className="brand-desc">Liderança nacional em câmaras reforçadas para agrícola, utilitários e carga.</p>
-            </div>
-            <div className="brand-item animate-on-scroll animate-fade-in-up stagger-3">
-              <span className="brand-name">VIPAL</span>
-              <span className="brand-tag">Reparação &amp; Insumos</span>
-              <p className="brand-desc">Tecnologia mundial em vulcanização, remendos e insumos profissionais.</p>
-            </div>
-            <div className="brand-item animate-on-scroll animate-fade-in-up stagger-4">
-              <span className="brand-name">VULCAFLEX</span>
-              <span className="brand-tag">Soluções de Reparo</span>
-              <p className="brand-desc">Reparação rápida e insumos técnicos de alta resistência.</p>
-            </div>
-            <div className="brand-item animate-on-scroll animate-fade-in-up stagger-5">
-              <span className="brand-name">FVA</span>
-              <span className="brand-tag">Acessórios &amp; Ferramentas</span>
-              <p className="brand-desc">Suprimentos, válvulas e ferramentas para manutenção de pneus.</p>
-            </div>
+            {BRANDS.map((brand, i) => (
+              <BrandCard key={brand.name} brand={brand} index={i} />
+            ))}
           </div>
+
         </div>
       </section>
 
