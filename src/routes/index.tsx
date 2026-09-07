@@ -200,8 +200,12 @@ header { animation: fadeInDown 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
   font-family: var(--font-main); font-weight: 900; font-style: italic;
   color: rgba(252, 90, 0, 0.03); pointer-events: none;
 }
-.kl .thesis h2 { font-size: 2.5rem; line-height: 1.2; margin-bottom: 20px; color: var(--primary-white); }
+.kl .thesis h2 { font-size: 2.5rem; line-height: 1.2; margin-bottom: 20px; color: var(--primary-white); word-break: break-word; }
 .kl .thesis p { font-size: 1.2rem; color: #E2E8F0; max-width: 900px; }
+@media (max-width: 640px) {
+  .kl .thesis h2 { font-size: 1.65rem; line-height: 1.25; }
+  .kl .thesis p { font-size: 1rem; }
+}
 .kl .pillars-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; }
 .kl .pillar-card {
   background: var(--bg-light); padding: 40px; border-radius: 4px; position: relative;
