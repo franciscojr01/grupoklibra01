@@ -438,6 +438,8 @@ export const Route = createFileRoute("/")({
 });
 
 function Index() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   useEffect(() => {
     if (typeof window === "undefined") return;
     const observer = new IntersectionObserver(
