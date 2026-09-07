@@ -626,10 +626,9 @@ function Index() {
               <li><a href="#produtos">Produtos</a></li>
               <li><a href="#marcas">Marcas Parceiras</a></li>
               <li><a href="#sobre">A K-Libra</a></li>
+              <li><a href="#formulario">Contato</a></li>
             </ul>
           </nav>
-
-          <a href="#formulario" className="btn btn-green header-cta">Solicitar Atendimento B2B</a>
 
           <button
             type="button"
@@ -646,7 +645,7 @@ function Index() {
             <li><a href="#produtos" onClick={() => setMenuOpen(false)}>Produtos</a></li>
             <li><a href="#marcas" onClick={() => setMenuOpen(false)}>Marcas Parceiras</a></li>
             <li><a href="#sobre" onClick={() => setMenuOpen(false)}>A K-Libra</a></li>
-            <li><a href="#formulario" className="btn btn-green" onClick={() => setMenuOpen(false)}>Solicitar Atendimento B2B</a></li>
+            <li><a href="#formulario" onClick={() => setMenuOpen(false)}>Contato</a></li>
           </ul>
         </div>
       </header>
@@ -657,7 +656,7 @@ function Index() {
             <h1>SUA REVENDA ABASTECIDA.<br /><span>SUA MARGEM PROTEGIDA.</span></h1>
             <p>Pneus, câmaras de ar e materiais de reparação para revendas, borracharias e oficinas que precisam de disponibilidade, condições competitivas e reposição ágil.</p>
             <div className="hero-btns">
-              <a href="#formulario" className="btn btn-green"><span className="graphic-arrows">&gt;&gt;</span> Solicitar Atendimento B2B</a>
+              <a href="#formulario" className="btn btn-green">Solicitar Atendimento B2B</a>
               <a href="#produtos" className="btn btn-secondary">Ver Produtos B2B</a>
             </div>
             <div className="hero-indicators">
