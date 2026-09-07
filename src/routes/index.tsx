@@ -676,32 +676,11 @@ function Index() {
           </div>
 
           <div className="brands-grid">
-            <div className="brand-item animate-on-scroll animate-fade-in-up stagger-1">
-              <img src={logoPegasus} alt="Logo Pegasus" className="brand-logo-img" loading="lazy" />
-              <span className="brand-tag">Pneus de Moto</span>
-              <p className="brand-desc">Durabilidade, aderência e alto rendimento quilométrico para duas rodas.</p>
-            </div>
-            <div className="brand-item animate-on-scroll animate-fade-in-up stagger-2">
-              <span className="brand-name">TORTUGA</span>
-              <span className="brand-tag">Câmaras de Ar</span>
-              <p className="brand-desc">Liderança nacional em câmaras reforçadas para agrícola, utilitários e carga.</p>
-            </div>
-            <div className="brand-item animate-on-scroll animate-fade-in-up stagger-3">
-              <span className="brand-name">VIPAL</span>
-              <span className="brand-tag">Reparação &amp; Insumos</span>
-              <p className="brand-desc">Tecnologia mundial em vulcanização, remendos e insumos profissionais.</p>
-            </div>
-            <div className="brand-item animate-on-scroll animate-fade-in-up stagger-4">
-              <span className="brand-name">VULCAFLEX</span>
-              <span className="brand-tag">Soluções de Reparo</span>
-              <p className="brand-desc">Reparação rápida e insumos técnicos de alta resistência.</p>
-            </div>
-            <div className="brand-item animate-on-scroll animate-fade-in-up stagger-5">
-              <span className="brand-name">FVA</span>
-              <span className="brand-tag">Acessórios &amp; Ferramentas</span>
-              <p className="brand-desc">Suprimentos, válvulas e ferramentas para manutenção de pneus.</p>
-            </div>
+            {BRANDS.map((brand, i) => (
+              <BrandCard key={brand.name} brand={brand} index={i} />
+            ))}
           </div>
+
         </div>
       </section>
 
