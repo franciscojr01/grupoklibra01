@@ -218,41 +218,56 @@ header { animation: fadeInDown 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
   width: 100%; height: 400px; object-fit: cover; border-radius: 4px;
   box-shadow: 0 20px 25px -5px rgba(0,0,0,0.2); border-left: 6px solid var(--primary-orange);
 }
-.kl .brands-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px; margin-top: 52px; }
+.kl .brands-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(420px, 1fr)); gap: 26px; margin-top: 52px; }
 .kl .brand-item {
-  background: var(--primary-white); padding: 24px 26px 30px; border: 1px solid var(--border-color);
-  border-radius: 18px; display: flex; flex-direction: column; align-items: center;
-  justify-content: flex-start; text-align: center; overflow: hidden;
+  background: var(--primary-white); padding: 22px; border: 1px solid var(--border-color);
+  border-radius: 20px; display: grid; grid-template-columns: 190px 1fr; gap: 24px;
+  align-items: center; text-align: left; overflow: hidden; position: relative;
   transition: transform 0.35s cubic-bezier(0.22,1,0.36,1), box-shadow 0.35s ease, border-color 0.35s ease;
-  box-shadow: 0 1px 2px rgba(12,12,12,0.04), 0 10px 24px -18px rgba(12,12,12,0.35);
+  box-shadow: 0 1px 2px rgba(12,12,12,0.04), 0 12px 30px -22px rgba(12,12,12,0.45);
 }
+.kl .brand-item::before {
+  content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 4px;
+  background: var(--primary-orange); opacity: 0; transition: opacity 0.35s ease;
+}
+.kl .brand-item:hover::before { opacity: 1; }
 .kl .brand-item:hover {
-  transform: translateY(-8px); border-color: rgba(252, 90, 0, 0.35);
-  box-shadow: 0 18px 40px -20px rgba(12, 12, 12, 0.35);
+  transform: translateY(-6px); border-color: rgba(252, 90, 0, 0.35);
+  box-shadow: 0 22px 46px -22px rgba(12, 12, 12, 0.4);
 }
 .kl .brand-logo-box {
   width: 100%; height: 150px; display: flex; align-items: center; justify-content: center;
-  margin-bottom: 22px; padding: 18px 24px; border-radius: 14px;
-  background: linear-gradient(180deg, #FFFFFF 0%, #F1F5F9 100%);
+  padding: 16px; border-radius: 16px;
+  background: linear-gradient(150deg, #FFFFFF 0%, #EEF2F7 100%);
   border: 1px solid var(--border-color);
-  box-shadow: inset 0 -2px 0 rgba(252, 90, 0, 0.18);
 }
-.kl .brand-item:hover .brand-logo-img { transform: scale(1.05); }
+.kl .brand-item:hover .brand-logo-img { transform: scale(1.06); }
 .kl .brand-logo-img {
-  max-width: 100%; max-height: 112px; width: auto; height: auto; object-fit: contain;
+  max-width: 100%; max-height: 118px; width: auto; height: auto; object-fit: contain;
   transition: transform 0.35s cubic-bezier(0.22,1,0.36,1);
 }
 .kl .brand-name {
   font-family: var(--font-main); font-weight: 900; font-style: italic; font-size: 1.5rem;
   color: var(--primary-black); letter-spacing: 0.04em;
 }
+.kl .brand-body { display: flex; flex-direction: column; gap: 10px; }
+.kl .brand-title {
+  font-family: var(--font-main); font-weight: 900; font-style: italic; font-size: 1.35rem;
+  color: var(--primary-black); letter-spacing: 0.03em; text-transform: uppercase; margin: 0;
+}
 .kl .brand-tag {
-  display: inline-block; background: rgba(252, 90, 0, 0.1); color: var(--primary-orange);
-  font-size: 0.7rem; font-weight: 800; padding: 6px 14px; border-radius: 999px;
-  text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 14px;
+  align-self: flex-start; background: rgba(252, 90, 0, 0.1); color: var(--primary-orange);
+  font-size: 0.68rem; font-weight: 800; padding: 6px 14px; border-radius: 999px;
+  text-transform: uppercase; letter-spacing: 0.08em;
   border: 1px solid rgba(252, 90, 0, 0.2);
 }
-.kl .brand-desc { font-size: 0.9rem; color: var(--text-muted); line-height: 1.55; }
+.kl .brand-desc { font-size: 0.92rem; color: var(--text-muted); line-height: 1.6; margin: 0; }
+@media (max-width: 640px) {
+  .kl .brands-grid { grid-template-columns: 1fr; }
+  .kl .brand-item { grid-template-columns: 1fr; text-align: center; }
+  .kl .brand-tag { align-self: center; }
+}
+
 
 .kl .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px; margin-bottom: 40px; }
 .kl .product-category-card {
