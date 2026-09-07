@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import logoPegasus from "@/assets/logo-pegasus.png";
 
 const css = `
@@ -121,7 +121,23 @@ header { animation: fadeInDown 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
 }
 .kl .nav-container { display: flex; justify-content: space-between; align-items: center; }
 .kl .brand-logo { display: flex; align-items: center; text-decoration: none; padding: 2px 0; }
-.kl .brand-logo img { height: 56px; width: auto; display: block; object-fit: contain; }
+.kl .brand-logo img { height: 80px; width: auto; display: block; object-fit: contain; }
+.kl .menu-toggle {
+  display: none; background: transparent; border: none; color: var(--primary-white);
+  font-size: 1.6rem; line-height: 1; padding: 8px; cursor: pointer;
+}
+.kl .mobile-menu {
+  display: none; flex-direction: column; gap: 4px; list-style: none;
+  border-top: 1px solid rgba(255,255,255,0.12); padding: 12px 0 16px;
+}
+.kl .mobile-menu.open { display: flex; }
+.kl .mobile-menu a {
+  color: var(--primary-white); text-decoration: none; font-weight: 700;
+  font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em;
+  padding: 10px 0; display: block;
+}
+.kl .mobile-menu a:hover { color: var(--primary-orange); }
+.kl .mobile-menu .btn { margin-top: 10px; text-align: center; display: block; }
 .kl .nav-links { display: flex; align-items: center; gap: 14px; list-style: none; }
 .kl .nav-links a {
   color: var(--primary-white); text-decoration: none; font-weight: 700;
@@ -381,9 +397,10 @@ header { animation: fadeInDown 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
   .kl .hero-btns { flex-direction: column; }
   .kl .btn { text-align: center; }
   .kl .nav-links,
-  .kl .header-cta,
-  .kl .brand-logo { display: none; }
-  .kl header { min-height: 0; padding: 0; border: none; }
+  .kl .header-cta { display: none; }
+  .kl .menu-toggle { display: block; }
+  .kl .brand-logo img { height: 56px; }
+  .kl header { padding: 6px 0; }
 }
 
 
@@ -421,6 +438,8 @@ export const Route = createFileRoute("/")({
 });
 
 function Index() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   useEffect(() => {
     if (typeof window === "undefined") return;
     const observer = new IntersectionObserver(
@@ -457,6 +476,24 @@ function Index() {
           </nav>
 
           <a href="#formulario" className="btn btn-primary header-cta">Solicitar Atendimento B2B</a>
+
+          <button
+            type="button"
+            className="menu-toggle"
+            aria-label="Abrir menu"
+            aria-expanded={menuOpen}
+            onClick={() => setMenuOpen((v) => !v)}
+          >
+            <i className="fa-solid fa-bars"></i>
+          </button>
+        </div>
+        <div className="container">
+          <ul className={`mobile-menu${menuOpen ? " open" : ""}`}>
+            <li><a href="#produtos" onClick={() => setMenuOpen(false)}>Produtos</a></li>
+            <li><a href="#marcas" onClick={() => setMenuOpen(false)}>Marcas Parceiras</a></li>
+            <li><a href="#sobre" onClick={() => setMenuOpen(false)}>A K-Libra</a></li>
+            <li><a href="#formulario" className="btn btn-primary" onClick={() => setMenuOpen(false)}>Solicitar Atendimento B2B</a></li>
+          </ul>
         </div>
       </header>
 
@@ -495,29 +532,29 @@ function Index() {
           <div className="products-grid">
             <div className="product-category-card animate-on-scroll animate-scale-in stagger-1">
               <div className="product-img-wrapper">
-                <img src="https://i.ibb.co/XZWgYv1m/60140c5a-8d30-4b82-9441-f61f7f8e0f3d.png" alt="Pneus de moto de alta qualidade para revenda" loading="lazy" />
+                <img src="https://i.ibb.co/XZWgYv1m/60140c5a-8d30-4b82-9441-f61f7f8e0f3d.png" alt="Pneus de moto de alta qualidade para revenda" loading="lazy" style={{ objectPosition: "35% center" }} />
               </div>
               <div className="product-card-body">
                 <div>
                   <h3>PNEUS DE MOTO</h3>
-                  <p>Linha completa para street, trail e entrega, com alta durabilidade e aderência no piso seco e molhado.</p>
+                  <p>Linha completa para motos urbanas e de uso misto, com excelente aderência, durabilidade e desempenho.</p>
                 </div>
                 <ul className="product-list">
-                  <li><i className="fa-solid fa-chevron-right"></i> Medidas urbanas de alto giro</li>
-                  <li><i className="fa-solid fa-chevron-right"></i> Reforçados para carga e moto-frete</li>
-                  <li><i className="fa-solid fa-chevron-right"></i> Opções para uso On/Off Road</li>
+                  <li><i className="fa-solid fa-chevron-right"></i> Medidas para motos street e trail</li>
+                  <li><i className="fa-solid fa-chevron-right"></i> Opções para uso urbano e misto</li>
+                  <li><i className="fa-solid fa-chevron-right"></i> Excelente aderência e durabilidade</li>
                 </ul>
               </div>
             </div>
 
             <div className="product-category-card animate-on-scroll animate-scale-in stagger-2">
               <div className="product-img-wrapper">
-                <img src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=600&q=80" alt="Câmaras de ar reforçadas" loading="lazy" />
+                <img src="https://i.ibb.co/xKs2sG7r/Chat-GPT-Image-6-de-set-de-2026-22-19-50.png" alt="Câmaras de ar agrícolas, automotivas e rodoviárias" loading="lazy" />
               </div>
               <div className="product-card-body">
                 <div>
                   <h3>CÂMARAS DE AR</h3>
-                  <p>Câmaras automotivas e industriais com alta retenção de ar e grande resistência a perfurações.</p>
+                  <p>Câmaras de ar agrícolas, automotivas e rodoviárias. Trabalhamos com as marcas mais reconhecidas do mercado, Tortuga e Pegasus.</p>
                 </div>
                 <ul className="product-list">
                   <li><i className="fa-solid fa-chevron-right"></i> Câmaras de ar agrícolas</li>
@@ -530,29 +567,29 @@ function Index() {
 
             <div className="product-category-card animate-on-scroll animate-scale-in stagger-3">
               <div className="product-img-wrapper">
-                <img src="https://images.unsplash.com/photo-1486006920555-c77dce18193b?auto=format&fit=crop&w=600&q=80" alt="Produtos de reparo e vulcanização" loading="lazy" />
+                <img src="https://i.ibb.co/mCxnnsZJ/image.png" alt="Insumos para reparos e vulcanização de pneus" loading="lazy" />
               </div>
               <div className="product-card-body">
                 <div>
                   <h3>REPAROS &amp; VULCANIZAÇÃO</h3>
-                  <p>Insumos essenciais para borracharias e autocenters, com soluções para vulcanização a frio e a quente.</p>
+                  <p>Insumos e materiais para reparos e vulcanização de pneus, com soluções práticas para diferentes tipos de conserto.</p>
                 </div>
                 <ul className="product-list">
-                  <li><i className="fa-solid fa-chevron-right"></i> Remendos a frio e manchetes</li>
-                  <li><i className="fa-solid fa-chevron-right"></i> Cimentos vulcanizantes e colas</li>
-                  <li><i className="fa-solid fa-chevron-right"></i> Macarrões e plaquetas de reparo</li>
+                  <li><i className="fa-solid fa-chevron-right"></i> Remendos a frio e manchões</li>
+                  <li><i className="fa-solid fa-chevron-right"></i> Cimentos e colas para vulcanização</li>
+                  <li><i className="fa-solid fa-chevron-right"></i> Macarrões e materiais para reparo</li>
                 </ul>
               </div>
             </div>
 
             <div className="product-category-card animate-on-scroll animate-scale-in stagger-4">
               <div className="product-img-wrapper">
-                <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80" alt="Ferramentas e acessórios profissionais" loading="lazy" />
+                <img src="https://i.ibb.co/PvmxMyN4/Chat-GPT-Image-6-de-set-de-2026-22-08-40.png" alt="Ferramentas e acessórios profissionais" loading="lazy" />
               </div>
               <div className="product-card-body">
                 <div>
                   <h3>ACESSÓRIOS &amp; SUPRIMENTOS</h3>
-                  <p>Ferramentas de bancada e consumíveis para agilidade e precisão no atendimento de oficina.</p>
+                  <p>Produtos essenciais para o dia a dia da borracharia, com ferramentas e insumos que garantem mais agilidade e eficiência nos serviços.</p>
                 </div>
                 <ul className="product-list">
                   <li><i className="fa-solid fa-chevron-right"></i> Válvulas e bicos (snap-in e aço)</li>
