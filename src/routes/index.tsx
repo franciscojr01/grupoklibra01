@@ -397,9 +397,10 @@ header { animation: fadeInDown 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
   .kl .hero-btns { flex-direction: column; }
   .kl .btn { text-align: center; }
   .kl .nav-links,
-  .kl .header-cta,
-  .kl .brand-logo { display: none; }
-  .kl header { min-height: 0; padding: 0; border: none; }
+  .kl .header-cta { display: none; }
+  .kl .menu-toggle { display: block; }
+  .kl .brand-logo img { height: 56px; }
+  .kl header { padding: 6px 0; }
 }
 
 
