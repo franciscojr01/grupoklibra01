@@ -146,7 +146,7 @@ header { animation: fadeInDown 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
 }
 .kl .mobile-menu a:hover { color: var(--primary-orange); }
 .kl .mobile-menu .btn { margin-top: 10px; text-align: center; display: block; }
-.kl .nav-links { display: flex; align-items: center; gap: 14px; list-style: none; }
+.kl .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
 .kl .nav-links a {
   color: var(--primary-white); text-decoration: none; font-weight: 700;
   font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em;
@@ -626,10 +626,9 @@ function Index() {
               <li><a href="#produtos">Produtos</a></li>
               <li><a href="#marcas">Marcas Parceiras</a></li>
               <li><a href="#sobre">A K-Libra</a></li>
+              <li><a href="#formulario">Contato</a></li>
             </ul>
           </nav>
-
-          <a href="#formulario" className="btn btn-green header-cta">Solicitar Atendimento B2B</a>
 
           <button
             type="button"
@@ -646,7 +645,7 @@ function Index() {
             <li><a href="#produtos" onClick={() => setMenuOpen(false)}>Produtos</a></li>
             <li><a href="#marcas" onClick={() => setMenuOpen(false)}>Marcas Parceiras</a></li>
             <li><a href="#sobre" onClick={() => setMenuOpen(false)}>A K-Libra</a></li>
-            <li><a href="#formulario" className="btn btn-green" onClick={() => setMenuOpen(false)}>Solicitar Atendimento B2B</a></li>
+            <li><a href="#formulario" onClick={() => setMenuOpen(false)}>Contato</a></li>
           </ul>
         </div>
       </header>
@@ -657,7 +656,7 @@ function Index() {
             <h1>SUA REVENDA ABASTECIDA.<br /><span>SUA MARGEM PROTEGIDA.</span></h1>
             <p>Pneus, câmaras de ar e materiais de reparação para revendas, borracharias e oficinas que precisam de disponibilidade, condições competitivas e reposição ágil.</p>
             <div className="hero-btns">
-              <a href="#formulario" className="btn btn-green"><span className="graphic-arrows">&gt;&gt;</span> Solicitar Atendimento B2B</a>
+              <a href="#formulario" className="btn btn-green">Solicitar Atendimento B2B</a>
               <a href="#produtos" className="btn btn-secondary">Ver Produtos B2B</a>
             </div>
             <div className="hero-indicators">
