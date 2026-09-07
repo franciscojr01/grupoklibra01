@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import logoPegasus from "@/assets/logo-pegasus.png";
 
 const css = `
@@ -121,7 +121,23 @@ header { animation: fadeInDown 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
 }
 .kl .nav-container { display: flex; justify-content: space-between; align-items: center; }
 .kl .brand-logo { display: flex; align-items: center; text-decoration: none; padding: 2px 0; }
-.kl .brand-logo img { height: 56px; width: auto; display: block; object-fit: contain; }
+.kl .brand-logo img { height: 80px; width: auto; display: block; object-fit: contain; }
+.kl .menu-toggle {
+  display: none; background: transparent; border: none; color: var(--primary-white);
+  font-size: 1.6rem; line-height: 1; padding: 8px; cursor: pointer;
+}
+.kl .mobile-menu {
+  display: none; flex-direction: column; gap: 4px; list-style: none;
+  border-top: 1px solid rgba(255,255,255,0.12); padding: 12px 0 16px;
+}
+.kl .mobile-menu.open { display: flex; }
+.kl .mobile-menu a {
+  color: var(--primary-white); text-decoration: none; font-weight: 700;
+  font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em;
+  padding: 10px 0; display: block;
+}
+.kl .mobile-menu a:hover { color: var(--primary-orange); }
+.kl .mobile-menu .btn { margin-top: 10px; text-align: center; display: block; }
 .kl .nav-links { display: flex; align-items: center; gap: 14px; list-style: none; }
 .kl .nav-links a {
   color: var(--primary-white); text-decoration: none; font-weight: 700;
