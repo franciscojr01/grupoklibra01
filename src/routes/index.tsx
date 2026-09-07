@@ -414,9 +414,66 @@ header { animation: fadeInDown 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
 
 `;
 
+const BRANDS = [
+  {
+    name: "PEGASUS",
+    logo: "https://i.ibb.co/VWKfj7Z0/Logotipo-logomarca-assess-rios-de-Luxo-2.png",
+    tag: "Câmaras de Ar",
+    desc: "Durabilidade, aderência e alto rendimento quilométrico para duas rodas.",
+  },
+  {
+    name: "TORTUGA",
+    logo: "https://i.ibb.co/HLKTR0CG/Logotipo-logomarca-assess-rios-de-Luxo-1.png",
+    tag: "Câmaras de Ar",
+    desc: "Liderança nacional em câmaras de ar reforçadas e protetores para veículos agrícolas, carga e utilitários.",
+  },
+  {
+    name: "VIPAL",
+    logo: "https://i.ibb.co/VYb7rwb5/Logotipo-logomarca-assess-rios-de-Luxo-5.png",
+    tag: "Reforma & Reparação",
+    desc: "Tecnologia global em produtos para recapagem, vulcanização e reparação de pneus.",
+  },
+  {
+    name: "VULCAFLEX",
+    logo: "https://i.ibb.co/m5hKtXx4/Logotipo-logomarca-assess-rios-de-Luxo-4.png",
+    tag: "Soluções de Reparo",
+    desc: "Especialista em manchões, remendos e insumos técnicos para reparação rápida e resistente.",
+  },
+  {
+    name: "FVA",
+    logo: "https://i.ibb.co/Z1xymGff/Logotipo-logomarca-assess-rios-de-Luxo-3.png",
+    tag: "Acessórios & Ferramentas",
+    desc: "Suprimentos, válvulas, pesos de balanceamento e ferramentas especializadas para autocenters e borracharias.",
+  },
+];
+
+function BrandCard({ brand, index }: { brand: (typeof BRANDS)[number]; index: number }) {
+  const [failed, setFailed] = useState(false);
+  return (
+    <div className={`brand-item animate-on-scroll animate-fade-in-up stagger-${index + 1}`}>
+      <div className="brand-logo-box">
+        {failed ? (
+          <span className="brand-name">{brand.name}</span>
+        ) : (
+          <img
+            src={brand.logo}
+            alt={`Logo ${brand.name}`}
+            className="brand-logo-img"
+            loading="lazy"
+            onError={() => setFailed(true)}
+          />
+        )}
+      </div>
+      <span className="brand-tag">{brand.tag}</span>
+      <p className="brand-desc">{brand.desc}</p>
+    </div>
+  );
+}
+
 const TITLE = "K-Libra | Distribuição B2B de Pneus, Câmaras e Reparação";
 const DESCRIPTION =
   "Distribuidora B2B parceira para revendas, borracharias e oficinas. Pneus, câmaras de ar e produtos de reparação com reposição ágil e blindagem de margem.";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
