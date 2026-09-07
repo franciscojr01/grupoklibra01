@@ -663,7 +663,7 @@ function Index() {
             <h1>SUA REVENDA ABASTECIDA.<br /><span>SUA MARGEM PROTEGIDA.</span></h1>
             <p>Pneus, câmaras de ar e materiais de reparação para revendas, borracharias e oficinas que precisam de disponibilidade, condições competitivas e reposição ágil.</p>
             <div className="hero-btns">
-              <a href="#formulario" className="btn btn-green">Solicitar Atendimento B2B</a>
+              <a href="#formulario" className="btn btn-green">Solicitar Tabela B2B</a>
               <a href="#produtos" className="btn btn-secondary">Ver Produtos B2B</a>
             </div>
             <div className="hero-indicators">
@@ -918,7 +918,7 @@ function Index() {
                     <option value="Todos">Mix Completo</option>
                   </select>
                 </div>
-                <button type="submit" className="btn btn-primary btn-full animate-on-scroll animate-fade-in-up"><span className="graphic-arrows">&gt;&gt;</span> QUERO RECEBER ATENDIMENTO B2B</button>
+                <button type="submit" className="btn btn-primary btn-full animate-on-scroll animate-fade-in-up"><span className="graphic-arrows">&gt;&gt;</span> QUERO RECEBER TABELA B2B</button>
               </form>
             </div>
           </div>
