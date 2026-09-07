@@ -458,7 +458,7 @@ function BrandCard({ brand, index }: { brand: (typeof BRANDS)[number]; index: nu
             src={brand.logo}
             alt={`Logo ${brand.name}`}
             className="brand-logo-img"
-            loading="lazy"
+            loading="lazy" decoding="async"
             onError={() => setFailed(true)}
           />
         )}
@@ -531,7 +531,7 @@ function Index() {
       <header>
         <div className="container nav-container">
           <a href="#" className="brand-logo" aria-label="K-Libra B2B">
-            <img src="https://i.ibb.co/4ZkfQFRX/Sem-nome-1200-x-698-px-2.png" alt="K-Libra B2B Logo" />
+            <img src="https://i.ibb.co/4ZkfQFRX/Sem-nome-1200-x-698-px-2.png" alt="K-Libra B2B Logo" width={320} height={186} decoding="async" fetchPriority="high" />
           </a>
 
           <nav>
@@ -599,7 +599,7 @@ function Index() {
           <div className="products-grid">
             <div className="product-category-card animate-on-scroll animate-scale-in stagger-1">
               <div className="product-img-wrapper">
-                <img src="https://i.ibb.co/XZWgYv1m/60140c5a-8d30-4b82-9441-f61f7f8e0f3d.png" alt="Pneus de moto de alta qualidade para revenda" loading="lazy" style={{ objectPosition: "35% center" }} />
+                <img src="https://i.ibb.co/XZWgYv1m/60140c5a-8d30-4b82-9441-f61f7f8e0f3d.png" alt="Pneus de moto de alta qualidade para revenda" loading="lazy" decoding="async" style={{ objectPosition: "35% center" }} />
               </div>
               <div className="product-card-body">
                 <div>
@@ -616,7 +616,7 @@ function Index() {
 
             <div className="product-category-card animate-on-scroll animate-scale-in stagger-2">
               <div className="product-img-wrapper">
-                <img src="https://i.ibb.co/xKs2sG7r/Chat-GPT-Image-6-de-set-de-2026-22-19-50.png" alt="Câmaras de ar agrícolas, automotivas e rodoviárias" loading="lazy" />
+                <img src="https://i.ibb.co/xKs2sG7r/Chat-GPT-Image-6-de-set-de-2026-22-19-50.png" alt="Câmaras de ar agrícolas, automotivas e rodoviárias" loading="lazy" decoding="async" />
               </div>
               <div className="product-card-body">
                 <div>
@@ -634,7 +634,7 @@ function Index() {
 
             <div className="product-category-card animate-on-scroll animate-scale-in stagger-3">
               <div className="product-img-wrapper">
-                <img src="https://i.ibb.co/mCxnnsZJ/image.png" alt="Insumos para reparos e vulcanização de pneus" loading="lazy" />
+                <img src="https://i.ibb.co/mCxnnsZJ/image.png" alt="Insumos para reparos e vulcanização de pneus" loading="lazy" decoding="async" />
               </div>
               <div className="product-card-body">
                 <div>
@@ -651,7 +651,7 @@ function Index() {
 
             <div className="product-category-card animate-on-scroll animate-scale-in stagger-4">
               <div className="product-img-wrapper">
-                <img src="https://i.ibb.co/PvmxMyN4/Chat-GPT-Image-6-de-set-de-2026-22-08-40.png" alt="Ferramentas e acessórios profissionais" loading="lazy" />
+                <img src="https://i.ibb.co/PvmxMyN4/Chat-GPT-Image-6-de-set-de-2026-22-08-40.png" alt="Ferramentas e acessórios profissionais" loading="lazy" decoding="async" />
               </div>
               <div className="product-card-body">
                 <div>
