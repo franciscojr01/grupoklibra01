@@ -572,9 +572,13 @@ function BrandCard({ brand, index }: { brand: (typeof BRANDS)[number]; index: nu
           />
         )}
       </div>
-      <span className="brand-tag">{brand.tag}</span>
-      <p className="brand-desc">{brand.desc}</p>
+      <div className="brand-body">
+        <h3 className="brand-title">{brand.name}</h3>
+        <span className="brand-tag">{brand.tag}</span>
+        <p className="brand-desc">{brand.desc}</p>
+      </div>
     </div>
+
   );
 }
 
