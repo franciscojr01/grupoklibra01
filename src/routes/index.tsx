@@ -572,7 +572,7 @@ function BrandCard({ brand, index }: { brand: (typeof BRANDS)[number]; index: nu
     <div className={`brand-item animate-on-scroll animate-fade-in-up stagger-${index + 1}`}>
       <div className="brand-logo-box">
         {failed ? (
-          <span className="brand-name">{brand.name}</span>
+          <span className="brand-fallback">{brand.name}</span>
         ) : (
           <img
             src={brand.logo}
@@ -584,12 +584,10 @@ function BrandCard({ brand, index }: { brand: (typeof BRANDS)[number]; index: nu
         )}
       </div>
       <div className="brand-body">
-        <h3 className="brand-title">{brand.name}</h3>
         <span className="brand-tag">{brand.tag}</span>
         <p className="brand-desc">{brand.desc}</p>
       </div>
     </div>
-
   );
 }
 
