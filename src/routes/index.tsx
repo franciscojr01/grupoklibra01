@@ -206,6 +206,41 @@ header { animation: fadeInDown 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
   .kl .thesis h2 { font-size: 1.65rem; line-height: 1.25; }
   .kl .thesis p { font-size: 1rem; }
 }
+.kl .pain-section {
+  background-color: var(--primary-black);
+  border-top: 3px solid var(--primary-orange);
+  position: relative; overflow: hidden;
+}
+.kl .pain-heading {
+  text-align: center; color: var(--primary-white);
+  font-size: 2.1rem; line-height: 1.25; max-width: 900px;
+  margin: 0 auto 70px; text-transform: none; font-style: normal;
+}
+.kl .pain-heading span { color: var(--primary-orange); text-transform: uppercase; font-style: italic; }
+.kl .pain-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 30px; max-width: 1050px; margin: 0 auto; grid-auto-rows: 1fr;
+}
+.kl .pain-card {
+  background: #111111; border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 14px; padding: 45px 32px; text-align: center;
+  display: flex; flex-direction: column; align-items: center;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.kl .pain-card:hover {
+  transform: translateY(-6px); border-color: var(--primary-orange);
+  box-shadow: 0 18px 40px -18px rgba(252, 90, 0, 0.35);
+}
+.kl .pain-icon { color: var(--primary-orange); font-size: 3.2rem; margin-bottom: 26px; }
+.kl .pain-card h3 {
+  color: var(--primary-white); font-size: 1.15rem; line-height: 1.35;
+  margin-bottom: 18px; text-transform: none; font-style: normal; font-weight: 800;
+}
+.kl .pain-card p { color: #D3D3D3; font-size: 0.98rem; line-height: 1.55; }
+@media (max-width: 900px) {
+  .kl .pain-grid { grid-template-columns: 1fr; max-width: 420px; }
+  .kl .pain-heading { font-size: 1.55rem; margin-bottom: 50px; }
+}
 .kl .pillars-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; }
 .kl .pillar-card {
   background: var(--bg-light); padding: 40px; border-radius: 4px; position: relative;
@@ -707,6 +742,32 @@ function Index() {
         <div className="container">
           <h2>VOCÊ NÃO VENDE APENAS PRODUTO.<br />VOCÊ VENDE DISPONIBILIDADE.</h2>
           <p>Ter o produto certo no momento certo é a diferença entre fechar o negócio ou perder o cliente. A K-Libra é a distribuidora que garante sua reposição, protege sua margem e elimina riscos no abastecimento da sua revenda.</p>
+        </div>
+      </section>
+
+      <section className="section-padding pain-section">
+        <div className="container">
+          <h2 className="pain-heading animate-on-scroll animate-fade-in-up">
+            Você está perdendo dinheiro para a internet<br />
+            <span>OU PARA O CONCORRENTE VIZINHO?</span>
+          </h2>
+          <div className="pain-grid">
+            <div className="pain-card animate-on-scroll animate-fade-in-up stagger-1">
+              <i className="fa-solid fa-xmark pain-icon"></i>
+              <h3>Falta de Estoque<br />na Safra:</h3>
+              <p>Esperar 15 dias por um distribuidor nacional custa clientes.</p>
+            </div>
+            <div className="pain-card animate-on-scroll animate-fade-in-up stagger-2">
+              <i className="fa-solid fa-xmark pain-icon"></i>
+              <h3>Guerra de Preços:</h3>
+              <p>É impossível lucrar se você compra mais caro que o preço do Mercado Livre.</p>
+            </div>
+            <div className="pain-card animate-on-scroll animate-fade-in-up stagger-3">
+              <i className="fa-solid fa-xmark pain-icon"></i>
+              <h3>Retornos e<br />Garantia:</h3>
+              <p>Vender produtos sem procedência gera dor de cabeça com o produtor rural.</p>
+            </div>
+          </div>
         </div>
       </section>
 
