@@ -1,0 +1,53 @@
+{
+  "capabilities": [
+    {
+      "capability": "frontend_routes",
+      "source": "src/routes/index.tsx, src/routes/__root.tsx",
+      "outcome": "migrate",
+      "status": "in_progress",
+      "next_action": "Copy route files into project"
+    },
+    {
+      "capability": "ui_components",
+      "source": "src/components/ui/*",
+      "outcome": "migrate",
+      "status": "in_progress",
+      "next_action": "Copy shadcn UI components into project"
+    },
+    {
+      "capability": "assets",
+      "source": "src/assets/*, public/favicon.png",
+      "outcome": "migrate",
+      "status": "in_progress",
+      "next_action": "Copy image assets into project"
+    },
+    {
+      "capability": "dependencies",
+      "source": "package.json, bun.lock",
+      "outcome": "migrate",
+      "status": "in_progress",
+      "next_action": "Install dependencies from source repo"
+    },
+    {
+      "capability": "database_schema",
+      "source": "none",
+      "outcome": "none",
+      "status": "not_applicable",
+      "next_action": "No schema or records bundled with repo"
+    },
+    {
+      "capability": "auth",
+      "source": "none",
+      "outcome": "none",
+      "status": "not_applicable",
+      "next_action": "No auth configured"
+    },
+    {
+      "capability": "external_integrations",
+      "source": "none",
+      "outcome": "none",
+      "status": "not_applicable",
+      "next_action": "No API keys or webhooks configured"
+    }
+  ]
+}
