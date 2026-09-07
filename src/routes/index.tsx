@@ -474,6 +474,24 @@ function Index() {
           </nav>
 
           <a href="#formulario" className="btn btn-primary header-cta">Solicitar Atendimento B2B</a>
+
+          <button
+            type="button"
+            className="menu-toggle"
+            aria-label="Abrir menu"
+            aria-expanded={menuOpen}
+            onClick={() => setMenuOpen((v) => !v)}
+          >
+            <i className="fa-solid fa-bars"></i>
+          </button>
+        </div>
+        <div className="container">
+          <ul className={`mobile-menu${menuOpen ? " open" : ""}`}>
+            <li><a href="#produtos" onClick={() => setMenuOpen(false)}>Produtos</a></li>
+            <li><a href="#marcas" onClick={() => setMenuOpen(false)}>Marcas Parceiras</a></li>
+            <li><a href="#sobre" onClick={() => setMenuOpen(false)}>A K-Libra</a></li>
+            <li><a href="#formulario" className="btn btn-primary" onClick={() => setMenuOpen(false)}>Solicitar Atendimento B2B</a></li>
+          </ul>
         </div>
       </header>
 
