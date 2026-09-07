@@ -110,12 +110,13 @@ header { animation: fadeInDown 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
   box-shadow: 0 8px 20px rgba(193, 64, 0, 0.4);
 }
 .kl .btn-green {
-  background-color: #25D366; color: var(--primary-white);
-  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+  background-color: #20aa32; color: #FFFFFF; border: 2px solid #20aa32;
+  box-shadow: 0 4px 15px rgba(32, 170, 50, 0.3);
 }
 .kl .btn-green:hover {
-  background-color: #1DA851; transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(29, 168, 81, 0.4);
+  background-color: #FFFFFF; color: #20aa32; border-color: #20aa32;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(32, 170, 50, 0.35);
 }
 .kl .btn-secondary {
   background-color: transparent; color: var(--primary-white);
