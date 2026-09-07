@@ -768,50 +768,82 @@ function Index() {
       <section className="section-padding bg-dark">
         <div className="container">
           <div className="section-header text-center animate-on-scroll animate-fade-in-up">
-            <h2>POR QUE REVENDAS CONFIAM NA K-LIBRA</h2>
-            <p>Operação estruturada, atendimento exclusivo para CNPJ e entrega no prazo para manter seu estoque girando.</p>
+            <h2>POR QUE ESCOLHER A K-LIBRA?</h2>
+            <p>Uma operação pensada para quem precisa de agilidade, abastecimento e um fornecedor que entende o mercado.</p>
           </div>
 
-          <div className="authority-grid">
-            <div className="authority-card animate-on-scroll animate-fade-in-up stagger-1">
-              <div className="number">+1000</div>
-              <h3>CLIENTES ATENDIDOS</h3>
-              <p>Revendas, oficinas e borracharias abastecidas pela nossa distribuição.</p>
+          <div className="why-grid">
+            <div className="why-card animate-on-scroll animate-fade-in-up stagger-1">
+              <div className="why-top">
+                <span className="why-num">01</span>
+                <span className="why-icon"><i className="fa-solid fa-briefcase"></i></span>
+              </div>
+              <h3>FOCO 100% B2B</h3>
+              <p>Atendimento voltado para empresas, revendedores, borracharias e profissionais do setor.</p>
             </div>
-            <div className="authority-card animate-on-scroll animate-fade-in-up stagger-2">
-              <div className="number">100%</div>
-              <h3>FOCO EM CNPJ</h3>
-              <p>Atendimento estritamente B2B: o consumidor final não concorre com você.</p>
-            </div>
-            <div className="authority-card animate-on-scroll animate-fade-in-up stagger-3">
-              <div className="number">24/48h</div>
+            <div className="why-card animate-on-scroll animate-fade-in-up stagger-2">
+              <div className="why-top">
+                <span className="why-num">02</span>
+                <span className="why-icon"><i className="fa-solid fa-truck-fast"></i></span>
+              </div>
               <h3>DESPACHO ÁGIL</h3>
-              <p>Pedidos processados rápido para sua loja nunca perder venda por falta.</p>
+              <p>Pedidos processados com agilidade para ajudar seu negócio a manter o estoque abastecido.</p>
+            </div>
+            <div className="why-card animate-on-scroll animate-fade-in-up stagger-3">
+              <div className="why-top">
+                <span className="why-num">03</span>
+                <span className="why-icon"><i className="fa-solid fa-business-time"></i></span>
+              </div>
+              <h3>DESDE 2022</h3>
+              <p>Atuação no mercado B2B com foco em distribuição e relacionamento comercial.</p>
+            </div>
+            <div className="why-card animate-on-scroll animate-fade-in-up stagger-4">
+              <div className="why-top">
+                <span className="why-num">04</span>
+                <span className="why-icon"><i className="fa-solid fa-map-location-dot"></i></span>
+              </div>
+              <h3>ATUAÇÃO NA BAHIA</h3>
+              <p>Atendimento e distribuição para diferentes regiões do estado.</p>
             </div>
           </div>
 
-          <div className="institutional-data-container" style={{ marginTop: 40, marginBottom: 0 }}>
-            <div className="stat-card animate-on-scroll animate-fade-in-up stagger-1">
-              <div className="stat-icon"><i className="fa-solid fa-business-time"></i></div>
-              <div className="stat-number">Desde 2022</div>
-              <div className="stat-label">Atuação no mercado B2B</div>
-            </div>
-            <div className="stat-card animate-on-scroll animate-fade-in-up stagger-2">
-              <div className="stat-icon"><i className="fa-solid fa-map-pin"></i></div>
-              <div className="stat-number">Bahia</div>
-              <div className="stat-label">Rotas próprias e entrega em todo o estado</div>
-            </div>
-            <div className="testimonial-card animate-on-scroll animate-fade-in-up stagger-3">
-              <div className="quote-icon"><i className="fa-solid fa-quote-left"></i></div>
-              <p className="testimonial-text">"A pontualidade nas entregas e a constância no estoque facilitam muito o nosso giro semanal. Um parceiro B2B de extrema confiança."</p>
-              <div className="testimonial-author">
-                <strong>— Carlos Eduardo</strong>
-                <span>Gerente de Compras</span>
+          <div className="routes-block animate-on-scroll animate-fade-in-up">
+            <span className="routes-kicker"><i className="fa-solid fa-route"></i> Cobertura em rota</span>
+            <h3>ROTAS NO OESTE DA BAHIA</h3>
+            <p className="routes-sub">Atendimento em rota para cidades do Oeste Baiano.</p>
+            <ul className="cities-grid">
+              {[
+                "Luís Eduardo Magalhães",
+                "Barreiras",
+                "São Desidério",
+                "Formosa do Rio Preto",
+                "Riachão das Neves",
+                "Cristópolis",
+                "Cotegipe",
+                "Wanderley",
+                "Santa Rita de Cássia",
+                "Correntina",
+                "Santa Maria da Vitória",
+                "Santana",
+                "São Félix do Coribe",
+                "Serra Dourada",
+                "Coribe",
+              ].map((city) => (
+                <li key={city}><i className="fa-solid fa-location-dot"></i>{city}</li>
+              ))}
+            </ul>
+
+            <div className="offroute">
+              <span className="offroute-icon"><i className="fa-solid fa-box-open"></i></span>
+              <div>
+                <h4>NÃO ESTÁ NA NOSSA ROTA?</h4>
+                <p>Também realizamos envios e despachos para qualquer cidade da Bahia.</p>
               </div>
             </div>
           </div>
         </div>
       </section>
+
 
       <section className="section-padding bg-dark" id="formulario" style={{ borderTop: "2px solid var(--primary-orange)" }}>
         <div className="container">
