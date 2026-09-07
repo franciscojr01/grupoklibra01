@@ -155,7 +155,7 @@ header { animation: fadeInDown 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
 .kl .nav-links a:hover { color: var(--primary-orange); }
 .kl .header-cta { padding: 12px 24px; font-size: 0.85rem; }
 .kl .hero {
-  background: linear-gradient(rgba(12, 12, 12, 0.88), rgba(12, 12, 12, 0.95)), url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+  background: linear-gradient(rgba(12, 12, 12, 0.88), rgba(12, 12, 12, 0.95)), url('/__l5e/assets-v1/f2cc748b-6906-4874-a638-2fc46d6c3419/hero-depot.png') center/cover no-repeat;
   padding: 180px 0 100px; color: var(--primary-white); min-height: 90vh;
   display: flex; align-items: center; position: relative;
 }
