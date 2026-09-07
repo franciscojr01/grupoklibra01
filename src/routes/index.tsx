@@ -489,7 +489,7 @@ header { animation: fadeInDown 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
 .kl .bg-dark .brand-item {
   background: var(--secondary-graphite); border-color: rgba(255,255,255,0.08);
 }
-.kl .bg-dark .brand-name { color: var(--primary-white); }
+.kl .bg-dark .brand-fallback { color: var(--primary-white); }
 .kl .bg-dark .brand-desc { color: #94A3B8; }
 .kl .bg-dark .product-category-card {
   background: var(--secondary-graphite); border-color: rgba(255,255,255,0.08);
