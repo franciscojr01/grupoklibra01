@@ -4,29 +4,29 @@
       "capability": "frontend_routes",
       "source": "src/routes/index.tsx, src/routes/__root.tsx",
       "outcome": "migrate",
-      "status": "in_progress",
-      "next_action": "Copy route files into project"
+      "status": "completed",
+      "next_action": "Verified via build"
     },
     {
       "capability": "ui_components",
       "source": "src/components/ui/*",
       "outcome": "migrate",
-      "status": "in_progress",
-      "next_action": "Copy shadcn UI components into project"
+      "status": "completed",
+      "next_action": "Verified via build"
     },
     {
       "capability": "assets",
       "source": "src/assets/*, public/favicon.png",
       "outcome": "migrate",
-      "status": "in_progress",
-      "next_action": "Copy image assets into project"
+      "status": "completed",
+      "next_action": "Verified via build"
     },
     {
       "capability": "dependencies",
       "source": "package.json, bun.lock",
       "outcome": "migrate",
-      "status": "in_progress",
-      "next_action": "Install dependencies from source repo"
+      "status": "completed",
+      "next_action": "bun install completed"
     },
     {
       "capability": "database_schema",
