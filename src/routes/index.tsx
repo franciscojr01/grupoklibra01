@@ -146,7 +146,7 @@ header { animation: fadeInDown 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
 }
 .kl .mobile-menu a:hover { color: var(--primary-orange); }
 .kl .mobile-menu .btn { margin-top: 10px; text-align: center; display: block; }
-.kl .nav-links { display: flex; align-items: center; gap: 14px; list-style: none; }
+.kl .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
 .kl .nav-links a {
   color: var(--primary-white); text-decoration: none; font-weight: 700;
   font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em;
