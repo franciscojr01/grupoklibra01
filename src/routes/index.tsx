@@ -109,6 +109,14 @@ header { animation: fadeInDown 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
   background-color: var(--dark-orange); transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(193, 64, 0, 0.4);
 }
+.kl .btn-green {
+  background-color: #25D366; color: var(--primary-white);
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+}
+.kl .btn-green:hover {
+  background-color: #1DA851; transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(29, 168, 81, 0.4);
+}
 .kl .btn-secondary {
   background-color: transparent; color: var(--primary-white);
   border: 2px solid var(--primary-white);
@@ -620,7 +628,7 @@ function Index() {
             </ul>
           </nav>
 
-          <a href="#formulario" className="btn btn-primary header-cta">Solicitar Atendimento B2B</a>
+          <a href="#formulario" className="btn btn-green header-cta">Solicitar Atendimento B2B</a>
 
           <button
             type="button"
@@ -637,7 +645,7 @@ function Index() {
             <li><a href="#produtos" onClick={() => setMenuOpen(false)}>Produtos</a></li>
             <li><a href="#marcas" onClick={() => setMenuOpen(false)}>Marcas Parceiras</a></li>
             <li><a href="#sobre" onClick={() => setMenuOpen(false)}>A K-Libra</a></li>
-            <li><a href="#formulario" className="btn btn-primary" onClick={() => setMenuOpen(false)}>Solicitar Atendimento B2B</a></li>
+            <li><a href="#formulario" className="btn btn-green" onClick={() => setMenuOpen(false)}>Solicitar Atendimento B2B</a></li>
           </ul>
         </div>
       </header>
@@ -648,7 +656,7 @@ function Index() {
             <h1>SUA REVENDA ABASTECIDA.<br /><span>SUA MARGEM PROTEGIDA.</span></h1>
             <p>Pneus, câmaras de ar e materiais de reparação para revendas, borracharias e oficinas que precisam de disponibilidade, condições competitivas e reposição ágil.</p>
             <div className="hero-btns">
-              <a href="#formulario" className="btn btn-primary"><span className="graphic-arrows">&gt;&gt;</span> Solicitar Atendimento B2B</a>
+              <a href="#formulario" className="btn btn-green"><span className="graphic-arrows">&gt;&gt;</span> Solicitar Atendimento B2B</a>
               <a href="#produtos" className="btn btn-secondary">Ver Produtos B2B</a>
             </div>
             <div className="hero-indicators">
@@ -911,7 +919,7 @@ function Index() {
       </section>
 
       <a
-        href="https://wa.me/5577999999999?text=Olá,%20gostaria%20de%20solicitar%20atendimento%20B2B%20para%20minha%20empresa."
+        href="https://api.whatsapp.com/send/?phone=557799969946&text=Ol%C3%A1%21+Vim+pelo+site+da+K-Libra+e+gostaria+de+solicitar+uma+cota%C3%A7%C3%A3o+dos+produtos+dispon%C3%ADveis.+Podem+me+enviar+o+cat%C3%A1logo+e+as+condi%C3%A7%C3%B5es+comerciais%3F&type=phone_number&app_absent=0"
         className="whatsapp-float"
         target="_blank"
         rel="noreferrer"
