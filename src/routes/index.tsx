@@ -206,6 +206,41 @@ header { animation: fadeInDown 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
   .kl .thesis h2 { font-size: 1.65rem; line-height: 1.25; }
   .kl .thesis p { font-size: 1rem; }
 }
+.kl .pain-section {
+  background-color: var(--primary-black);
+  border-top: 3px solid var(--primary-orange);
+  position: relative; overflow: hidden;
+}
+.kl .pain-heading {
+  text-align: center; color: var(--primary-white);
+  font-size: 2.1rem; line-height: 1.25; max-width: 900px;
+  margin: 0 auto 70px; text-transform: none; font-style: normal;
+}
+.kl .pain-heading span { color: var(--primary-orange); text-transform: uppercase; font-style: italic; }
+.kl .pain-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 30px; max-width: 1050px; margin: 0 auto; grid-auto-rows: 1fr;
+}
+.kl .pain-card {
+  background: #111111; border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 14px; padding: 45px 32px; text-align: center;
+  display: flex; flex-direction: column; align-items: center;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.kl .pain-card:hover {
+  transform: translateY(-6px); border-color: var(--primary-orange);
+  box-shadow: 0 18px 40px -18px rgba(252, 90, 0, 0.35);
+}
+.kl .pain-icon { color: var(--primary-orange); font-size: 3.2rem; margin-bottom: 26px; }
+.kl .pain-card h3 {
+  color: var(--primary-white); font-size: 1.15rem; line-height: 1.35;
+  margin-bottom: 18px; text-transform: none; font-style: normal; font-weight: 800;
+}
+.kl .pain-card p { color: #D3D3D3; font-size: 0.98rem; line-height: 1.55; }
+@media (max-width: 900px) {
+  .kl .pain-grid { grid-template-columns: 1fr; max-width: 420px; }
+  .kl .pain-heading { font-size: 1.55rem; margin-bottom: 50px; }
+}
 .kl .pillars-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; }
 .kl .pillar-card {
   background: var(--bg-light); padding: 40px; border-radius: 4px; position: relative;
