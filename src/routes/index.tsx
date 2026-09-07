@@ -1,6 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import logoPegasus from "@/assets/logo-pegasus.png";
 
 const css = `
 :root {
