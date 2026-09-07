@@ -589,7 +589,7 @@ function Index() {
               <div className="product-card-body">
                 <div>
                   <h3>ACESSÓRIOS &amp; SUPRIMENTOS</h3>
-                  <p>Ferramentas de bancada e consumíveis para agilidade e precisão no atendimento de oficina.</p>
+                  <p>Produtos essenciais para o dia a dia da borracharia, com ferramentas e insumos que garantem mais agilidade e eficiência nos serviços.</p>
                 </div>
                 <ul className="product-list">
                   <li><i className="fa-solid fa-chevron-right"></i> Válvulas e bicos (snap-in e aço)</li>
