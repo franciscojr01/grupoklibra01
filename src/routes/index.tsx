@@ -826,6 +826,55 @@ function Index() {
         </div>
       </section>
 
+      <section className="section-padding partner-section">
+        <div className="container">
+          <h2 className="partner-heading animate-on-scroll animate-fade-in-up">
+            <span className="line-1">A PARCERIA ESTRATÉGICA</span>
+            <span className="line-2">QUE BLINDA O SEU ESTOQUE</span>
+          </h2>
+          <div className="partner-grid">
+            <div className="partner-card animate-on-scroll animate-fade-in-up stagger-1">
+              <i className="fa-solid fa-check"></i>
+              <h3>Poder de Compra Massivo:</h3>
+              <p>Operamos grandes volumes para garantir a você preço de distribuidor master.</p>
+            </div>
+            <div className="partner-card animate-on-scroll animate-fade-in-up stagger-2">
+              <i className="fa-solid fa-check"></i>
+              <h3>Logística Própria:</h3>
+              <p>Você pede, nós despachamos direto para a sua loja com agilidade na porta.</p>
+            </div>
+            <div className="partner-card animate-on-scroll animate-fade-in-up stagger-3">
+              <i className="fa-solid fa-check"></i>
+              <h3>Zero Reclamação Técnica:</h3>
+              <p>Trabalhamos apenas com o padrão ouro do mercado. Menos garantias, mais lucro.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="logostrip-section">
+        <div className="container">
+          <h2 className="logostrip-title animate-on-scroll animate-fade-in-up">
+            Distribuidor autorizado das marcas que o seu cliente exige.
+          </h2>
+          <div className="logostrip animate-on-scroll animate-fade-in">
+            {BRANDS.map((b) => (
+              <img
+                key={b.name}
+                src={b.logo}
+                alt={b.name}
+                loading="lazy"
+                decoding="async"
+                draggable={false}
+                onContextMenu={(e) => e.preventDefault()}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
+
+
       <section id="produtos" className="section-padding bg-dark">
         <div className="container text-center">
           <div className="section-header animate-on-scroll animate-fade-in-up">
