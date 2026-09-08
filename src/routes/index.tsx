@@ -260,62 +260,6 @@ header { animation: fadeInDown 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
   width: 100%; height: 400px; object-fit: cover; border-radius: 4px;
   box-shadow: 0 20px 25px -5px rgba(0,0,0,0.2); border-left: 6px solid var(--primary-orange);
 }
-.kl .brands-grid {
-  display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 52px;
-  grid-auto-rows: 1fr;
-}
-.kl .brand-item {
-  background: var(--primary-white); border: 1px solid var(--border-color);
-  border-radius: 20px; overflow: hidden; position: relative;
-  display: flex; flex-direction: column; height: 100%;
-  transition: transform 0.35s cubic-bezier(0.22,1,0.36,1), box-shadow 0.35s ease, border-color 0.35s ease;
-  box-shadow: 0 1px 2px rgba(12,12,12,0.04), 0 12px 30px -22px rgba(12,12,12,0.45);
-}
-.kl .brand-item::before {
-  content: ""; position: absolute; left: 0; right: 0; top: 0; height: 4px;
-  background: var(--primary-orange); opacity: 0; transition: opacity 0.35s ease;
-}
-.kl .brand-item:hover::before { opacity: 1; }
-.kl .brand-item:hover {
-  transform: translateY(-6px); border-color: rgba(252, 90, 0, 0.35);
-  box-shadow: 0 22px 46px -22px rgba(12, 12, 12, 0.4);
-}
-.kl .brand-logo-box {
-  width: 100%; height: 150px; min-height: 150px;
-  display: flex; align-items: center; justify-content: center;
-  padding: 24px;
-  background: linear-gradient(150deg, #FFFFFF 0%, #EEF2F7 100%);
-  border-bottom: 1px solid var(--border-color);
-}
-.kl .brand-item:hover .brand-logo-img { transform: scale(1.06); }
-.kl .brand-logo-img {
-  max-width: 100%; max-height: 110px; width: auto; height: auto; object-fit: contain;
-  transition: transform 0.35s cubic-bezier(0.22,1,0.36,1);
-}
-.kl .brand-fallback {
-  font-family: var(--font-main); font-weight: 900; font-style: italic; font-size: 1.4rem;
-  color: var(--primary-black); letter-spacing: 0.04em; text-transform: uppercase;
-}
-.kl .brand-body {
-  display: flex; flex-direction: column; justify-content: flex-start; align-items: center;
-  gap: 10px; padding: 22px 24px 26px; text-align: center; flex: 1;
-}
-.kl .brand-tag {
-  align-self: center; background: rgba(252, 90, 0, 0.1); color: var(--primary-orange);
-  font-size: 0.68rem; font-weight: 800; padding: 6px 14px; border-radius: 999px;
-  text-transform: uppercase; letter-spacing: 0.08em;
-  border: 1px solid rgba(252, 90, 0, 0.2);
-}
-.kl .brand-desc { font-size: 0.92rem; color: var(--text-muted); line-height: 1.55; margin: 0; }
-@media (max-width: 900px) {
-  .kl .brands-grid { grid-template-columns: repeat(2, 1fr); }
-}
-@media (max-width: 640px) {
-  .kl .brands-grid { grid-template-columns: 1fr; }
-  .kl .brand-logo-box { height: 150px; min-height: 150px; padding: 22px; }
-  .kl .brand-logo-img { max-height: 100px; }
-  .kl .brand-body { padding: 20px 22px 24px; gap: 10px; }
-}
 
 
 .kl .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px; margin-bottom: 40px; }
@@ -524,11 +468,6 @@ header { animation: fadeInDown 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
   border-top: 1px solid rgba(255,255,255,0.05);
 }
 .kl .bg-dark .section-header p { color: #CBD5E1; }
-.kl .bg-dark .brand-item {
-  background: var(--secondary-graphite); border-color: rgba(255,255,255,0.08);
-}
-.kl .bg-dark .brand-fallback { color: var(--primary-white); }
-.kl .bg-dark .brand-desc { color: #94A3B8; }
 .kl .bg-dark .product-category-card {
   background: var(--secondary-graphite); border-color: rgba(255,255,255,0.08);
   border-top-color: var(--primary-orange);
@@ -642,63 +581,6 @@ header { animation: fadeInDown 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
 `;
 
 
-const BRANDS = [
-  {
-    name: "PEGASUS",
-    logo: "https://i.ibb.co/VWKfj7Z0/Logotipo-logomarca-assess-rios-de-Luxo-2.png",
-    tag: "Câmaras de Ar",
-    desc: "Durabilidade, aderência e alto rendimento quilométrico para duas rodas.",
-  },
-  {
-    name: "TORTUGA",
-    logo: "https://i.ibb.co/HLKTR0CG/Logotipo-logomarca-assess-rios-de-Luxo-1.png",
-    tag: "Câmaras de Ar",
-    desc: "Liderança nacional em câmaras de ar reforçadas e protetores para veículos agrícolas, carga e utilitários.",
-  },
-  {
-    name: "VIPAL",
-    logo: "https://i.ibb.co/VYb7rwb5/Logotipo-logomarca-assess-rios-de-Luxo-5.png",
-    tag: "Reforma & Reparação",
-    desc: "Tecnologia global em produtos para recapagem, vulcanização e reparação de pneus.",
-  },
-  {
-    name: "VULCAFLEX",
-    logo: "https://i.ibb.co/m5hKtXx4/Logotipo-logomarca-assess-rios-de-Luxo-4.png",
-    tag: "Soluções de Reparo",
-    desc: "Especialista em manchões, remendos e insumos técnicos para reparação rápida e resistente.",
-  },
-  {
-    name: "FVA",
-    logo: "https://i.ibb.co/Z1xymGff/Logotipo-logomarca-assess-rios-de-Luxo-3.png",
-    tag: "Acessórios & Ferramentas",
-    desc: "Suprimentos, válvulas, pesos de balanceamento e ferramentas especializadas para autocenters e borracharias.",
-  },
-];
-
-function BrandCard({ brand, index }: { brand: (typeof BRANDS)[number]; index: number }) {
-  const [failed, setFailed] = useState(false);
-  return (
-    <div className={`brand-item animate-on-scroll animate-fade-in-up stagger-${index + 1}`}>
-      <div className="brand-logo-box">
-        {failed ? (
-          <span className="brand-fallback">{brand.name}</span>
-        ) : (
-          <img
-            src={brand.logo}
-            alt={`Logo ${brand.name}`}
-            className="brand-logo-img"
-            loading="lazy" decoding="async"
-            onError={() => setFailed(true)}
-          />
-        )}
-      </div>
-      <div className="brand-body">
-        <span className="brand-tag">{brand.tag}</span>
-        <p className="brand-desc">{brand.desc}</p>
-      </div>
-    </div>
-  );
-}
 
 const TITLE = "K-Libra | Distribuição B2B de Pneus, Câmaras e Reparação";
 const DESCRIPTION =
@@ -939,21 +821,6 @@ function Index() {
         </div>
       </section>
 
-      <section id="marcas" className="section-padding bg-light">
-        <div className="container text-center">
-          <div className="section-header animate-on-scroll animate-fade-in-up">
-            <h2>MARCAS DE CONFIANÇA QUE DISTRIBUÍMOS</h2>
-            <p>Parceria direta com fabricantes líderes de mercado: tecnologia, performance e garantia comercial para o seu cliente final.</p>
-          </div>
-
-          <div className="brands-grid">
-            {BRANDS.map((brand, i) => (
-              <BrandCard key={brand.name} brand={brand} index={i} />
-            ))}
-          </div>
-
-        </div>
-      </section>
 
       <section id="porque" className="section-padding bg-dark">
         <div className="container">
