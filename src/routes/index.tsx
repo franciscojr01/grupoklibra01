@@ -564,9 +564,64 @@ header { animation: fadeInDown 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
   .kl header { padding: 6px 0; }
 }
 
+/* ===== Parceria Estratégica (fundo laranja) ===== */
+.kl .partner-section {
+  background: radial-gradient(circle at 50% 40%, #FF6A12 0%, #F25200 45%, #D94900 100%);
+  position: relative; overflow: hidden;
+}
+.kl .partner-heading {
+  text-align: center; margin: 0 auto 60px; max-width: 950px;
+  font-size: 2.6rem; line-height: 1.15; font-style: normal;
+  text-transform: uppercase; font-weight: 900; letter-spacing: -0.01em;
+}
+.kl .partner-heading .line-1 { display: block; color: var(--primary-white); }
+.kl .partner-heading .line-2 { display: block; color: var(--primary-black); }
+.kl .partner-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 46px;
+  max-width: 1000px; margin: 0 auto; grid-auto-rows: 1fr;
+}
+.kl .partner-card {
+  background: #0B0B0B; border-radius: 18px; padding: 42px 30px 46px;
+  text-align: center; display: flex; flex-direction: column; align-items: center;
+  box-shadow: 0 18px 40px -18px rgba(0,0,0,0.45);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.kl .partner-card:hover { transform: translateY(-6px); box-shadow: 0 26px 50px -20px rgba(0,0,0,0.55); }
+.kl .partner-card i { color: var(--primary-white); font-size: 2.6rem; margin-bottom: 30px; }
+.kl .partner-card h3 {
+  color: var(--primary-orange); font-size: 1.15rem; line-height: 1.35;
+  margin-bottom: 20px; text-transform: none; font-style: normal; font-weight: 800;
+}
+.kl .partner-card p { color: var(--primary-white); font-size: 1rem; line-height: 1.6; }
+@media (max-width: 900px) {
+  .kl .partner-grid { grid-template-columns: 1fr; max-width: 420px; gap: 26px; }
+  .kl .partner-heading { font-size: 1.7rem; margin-bottom: 44px; }
+}
 
-
+/* ===== Faixa de logos das marcas ===== */
+.kl .logostrip-section { background: var(--primary-white); padding: 70px 0; }
+.kl .logostrip-title {
+  text-align: center; font-size: 1.5rem; font-weight: 800; color: var(--primary-black);
+  text-transform: none; font-style: normal; margin-bottom: 45px;
+}
+.kl .logostrip {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: center;
+  gap: 50px 70px;
+}
+.kl .logostrip img {
+  height: 74px; width: auto; max-width: 190px; object-fit: contain;
+  filter: grayscale(100%) contrast(1.15); opacity: 0.9;
+  user-select: none; -webkit-user-drag: none;
+  transition: opacity 0.3s ease, filter 0.3s ease;
+}
+.kl .logostrip img:hover { filter: grayscale(0%); opacity: 1; }
+@media (max-width: 640px) {
+  .kl .logostrip { gap: 34px 40px; }
+  .kl .logostrip img { height: 52px; max-width: 130px; }
+  .kl .logostrip-title { font-size: 1.15rem; }
+}
 `;
+
 
 const BRANDS = [
   {
