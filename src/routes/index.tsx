@@ -882,21 +882,6 @@ function Index() {
         </div>
       </section>
 
-      <section id="marcas" className="section-padding bg-light">
-        <div className="container text-center">
-          <div className="section-header animate-on-scroll animate-fade-in-up">
-            <h2>MARCAS DE CONFIANÇA QUE DISTRIBUÍMOS</h2>
-            <p>Parceria direta com fabricantes líderes de mercado: tecnologia, performance e garantia comercial para o seu cliente final.</p>
-          </div>
-
-          <div className="brands-grid">
-            {BRANDS.map((brand, i) => (
-              <BrandCard key={brand.name} brand={brand} index={i} />
-            ))}
-          </div>
-
-        </div>
-      </section>
 
       <section id="porque" className="section-padding bg-dark">
         <div className="container">
