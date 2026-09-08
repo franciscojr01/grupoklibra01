@@ -260,62 +260,6 @@ header { animation: fadeInDown 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
   width: 100%; height: 400px; object-fit: cover; border-radius: 4px;
   box-shadow: 0 20px 25px -5px rgba(0,0,0,0.2); border-left: 6px solid var(--primary-orange);
 }
-.kl .brands-grid {
-  display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 52px;
-  grid-auto-rows: 1fr;
-}
-.kl .brand-item {
-  background: var(--primary-white); border: 1px solid var(--border-color);
-  border-radius: 20px; overflow: hidden; position: relative;
-  display: flex; flex-direction: column; height: 100%;
-  transition: transform 0.35s cubic-bezier(0.22,1,0.36,1), box-shadow 0.35s ease, border-color 0.35s ease;
-  box-shadow: 0 1px 2px rgba(12,12,12,0.04), 0 12px 30px -22px rgba(12,12,12,0.45);
-}
-.kl .brand-item::before {
-  content: ""; position: absolute; left: 0; right: 0; top: 0; height: 4px;
-  background: var(--primary-orange); opacity: 0; transition: opacity 0.35s ease;
-}
-.kl .brand-item:hover::before { opacity: 1; }
-.kl .brand-item:hover {
-  transform: translateY(-6px); border-color: rgba(252, 90, 0, 0.35);
-  box-shadow: 0 22px 46px -22px rgba(12, 12, 12, 0.4);
-}
-.kl .brand-logo-box {
-  width: 100%; height: 150px; min-height: 150px;
-  display: flex; align-items: center; justify-content: center;
-  padding: 24px;
-  background: linear-gradient(150deg, #FFFFFF 0%, #EEF2F7 100%);
-  border-bottom: 1px solid var(--border-color);
-}
-.kl .brand-item:hover .brand-logo-img { transform: scale(1.06); }
-.kl .brand-logo-img {
-  max-width: 100%; max-height: 110px; width: auto; height: auto; object-fit: contain;
-  transition: transform 0.35s cubic-bezier(0.22,1,0.36,1);
-}
-.kl .brand-fallback {
-  font-family: var(--font-main); font-weight: 900; font-style: italic; font-size: 1.4rem;
-  color: var(--primary-black); letter-spacing: 0.04em; text-transform: uppercase;
-}
-.kl .brand-body {
-  display: flex; flex-direction: column; justify-content: flex-start; align-items: center;
-  gap: 10px; padding: 22px 24px 26px; text-align: center; flex: 1;
-}
-.kl .brand-tag {
-  align-self: center; background: rgba(252, 90, 0, 0.1); color: var(--primary-orange);
-  font-size: 0.68rem; font-weight: 800; padding: 6px 14px; border-radius: 999px;
-  text-transform: uppercase; letter-spacing: 0.08em;
-  border: 1px solid rgba(252, 90, 0, 0.2);
-}
-.kl .brand-desc { font-size: 0.92rem; color: var(--text-muted); line-height: 1.55; margin: 0; }
-@media (max-width: 900px) {
-  .kl .brands-grid { grid-template-columns: repeat(2, 1fr); }
-}
-@media (max-width: 640px) {
-  .kl .brands-grid { grid-template-columns: 1fr; }
-  .kl .brand-logo-box { height: 150px; min-height: 150px; padding: 22px; }
-  .kl .brand-logo-img { max-height: 100px; }
-  .kl .brand-body { padding: 20px 22px 24px; gap: 10px; }
-}
 
 
 .kl .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px; margin-bottom: 40px; }
