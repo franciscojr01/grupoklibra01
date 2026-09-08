@@ -825,7 +825,6 @@ function Index() {
           alt="Você está perdendo dinheiro para a internet ou para o concorrente vizinho? Falta de estoque, guerra de preços e retornos"
           width={1911}
           height={770}
-          loading="lazy"
           decoding="async"
           draggable={false}
           onContextMenu={(e) => e.preventDefault()}
@@ -838,7 +837,6 @@ function Index() {
           alt="A parceria estratégica que blinda o seu estoque: poder de compra massivo, logística própria e zero reclamação técnica"
           width={1911}
           height={770}
-          loading="lazy"
           decoding="async"
           draggable={false}
           onContextMenu={(e) => e.preventDefault()}
@@ -851,7 +849,6 @@ function Index() {
           alt="Distribuidor autorizado das marcas Pegasus, Tortuga, Vipal, Vulcaflex e FVA"
           width={1915}
           height={306}
-          loading="lazy"
           decoding="async"
           draggable={false}
           onContextMenu={(e) => e.preventDefault()}
