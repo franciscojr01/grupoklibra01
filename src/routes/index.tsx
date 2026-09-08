@@ -1,5 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
+import secaoProblemas from "@/assets/secao-problemas.png.asset.json";
+import secaoParceria from "@/assets/secao-parceria.png.asset.json";
+import secaoLogos from "@/assets/secao-logos.png.asset.json";
 
 const css = `
 :root {
