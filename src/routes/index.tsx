@@ -623,6 +623,22 @@ header { animation: fadeInDown 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
   .kl .logostrip img { height: 52px; max-width: 130px; }
   .kl .logostrip-title { font-size: 1.15rem; }
 }
+
+/* ===== Seções substituídas por imagens (bloqueadas) ===== */
+.kl .image-section {
+  width: 100%;
+  line-height: 0;
+  display: block;
+  overflow: hidden;
+}
+.kl .image-section img {
+  width: 100%;
+  height: auto;
+  display: block;
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
 `;
 
 
