@@ -1,8 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import secaoProblemas from "@/assets/secao-problemas.png.asset.json";
-import secaoParceria from "@/assets/secao-parceria.png.asset.json";
-import secaoLogos from "@/assets/secao-logos.png.asset.json";
+import logoPegasus from "@/assets/logos/pegasus.png";
+import logoTortuga from "@/assets/logos/tortuga.png";
+import logoFva from "@/assets/logos/fva.png";
+import logoVipal from "@/assets/logos/vipal.png";
+import logoVulcaflex from "@/assets/logos/vulcaflex.png";
 
 const css = `
 :root {
@@ -563,20 +565,14 @@ header { animation: fadeInDown 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
   .kl .logostrip-title { font-size: 1.15rem; }
 }
 
-/* ===== Seções substituídas por imagens (bloqueadas) ===== */
-.kl .image-section {
-  width: 100%;
-  line-height: 0;
-  display: block;
-  overflow: hidden;
-}
-.kl .image-section img {
-  width: 100%;
-  height: auto;
-  display: block;
-  user-select: none;
-  -webkit-user-drag: none;
+/* ===== Decoração da seção de problemas ===== */
+.kl .pain-deco {
+  position: absolute; left: -40px; bottom: -60px; width: 480px; height: 480px;
   pointer-events: none;
+}
+.kl .pain-heading span { display: block; font-size: 1.15em; margin-top: 6px; }
+@media (max-width: 640px) {
+  .kl .pain-deco { width: 300px; height: 300px; opacity: 0.6; }
 }
 `;
 
@@ -701,40 +697,73 @@ function Index() {
         </div>
       </section>
 
-      <section className="image-section" aria-label="Problemas que a K-Libra resolve">
-        <img
-          src={secaoProblemas.url}
-          alt="Você está perdendo dinheiro para a internet ou para o concorrente vizinho? Falta de estoque, guerra de preços e retornos"
-          width={1911}
-          height={770}
-          decoding="async"
-          draggable={false}
-          onContextMenu={(e) => e.preventDefault()}
-        />
+      <section className="pain-section section-padding" aria-label="Problemas que a K-Libra resolve">
+        <svg className="pain-deco" viewBox="0 0 500 500" fill="none" aria-hidden="true">
+          <path d="M20 480 L180 200 L320 340 L480 60" stroke="#FC5A00" strokeWidth="2" opacity="0.35" />
+          <path d="M60 500 L220 240" stroke="#FC5A00" strokeWidth="2" opacity="0.2" />
+        </svg>
+        <div className="container">
+          <h2 className="pain-heading animate-on-scroll animate-fade-in-up">
+            Você está perdendo dinheiro para a internet
+            <span>OU PARA O CONCORRENTE VIZINHO?</span>
+          </h2>
+          <div className="pain-grid">
+            <div className="pain-card animate-on-scroll animate-fade-in-up stagger-1">
+              <i className="fa-solid fa-xmark pain-icon"></i>
+              <h3>Falta de Estoque na Safra:</h3>
+              <p>Esperar 15 dias por um distribuidor nacional custa clientes.</p>
+            </div>
+            <div className="pain-card animate-on-scroll animate-fade-in-up stagger-2">
+              <i className="fa-solid fa-xmark pain-icon"></i>
+              <h3>Guerra de Preços:</h3>
+              <p>É impossível lucrar se você compra mais caro que o preço do Mercado Livre.</p>
+            </div>
+            <div className="pain-card animate-on-scroll animate-fade-in-up stagger-3">
+              <i className="fa-solid fa-xmark pain-icon"></i>
+              <h3>Retornos e Garantia:</h3>
+              <p>Vender produtos sem procedência gera dor de cabeça com o produtor rural.</p>
+            </div>
+          </div>
+        </div>
       </section>
 
-      <section className="image-section" aria-label="A parceria estratégica que blinda o seu estoque">
-        <img
-          src={secaoParceria.url}
-          alt="A parceria estratégica que blinda o seu estoque: poder de compra massivo, logística própria e zero reclamação técnica"
-          width={1911}
-          height={770}
-          decoding="async"
-          draggable={false}
-          onContextMenu={(e) => e.preventDefault()}
-        />
+      <section className="partner-section section-padding" aria-label="A parceria estratégica que blinda o seu estoque">
+        <div className="container">
+          <h2 className="partner-heading animate-on-scroll animate-fade-in-up">
+            <span className="line-1">A Parceria Estratégica</span>
+            <span className="line-2">Que Blinda o Seu Estoque</span>
+          </h2>
+          <div className="partner-grid">
+            <div className="partner-card animate-on-scroll animate-fade-in-up stagger-1">
+              <i className="fa-solid fa-check"></i>
+              <h3>Poder de Compra Massivo:</h3>
+              <p>Operamos grandes volumes para garantir a você preço de distribuidor master.</p>
+            </div>
+            <div className="partner-card animate-on-scroll animate-fade-in-up stagger-2">
+              <i className="fa-solid fa-check"></i>
+              <h3>Logística Própria:</h3>
+              <p>Você pede, nós despachamos direto para a sua loja com agilidade na porta.</p>
+            </div>
+            <div className="partner-card animate-on-scroll animate-fade-in-up stagger-3">
+              <i className="fa-solid fa-check"></i>
+              <h3>Zero Reclamação Técnica:</h3>
+              <p>Trabalhamos apenas com o padrão ouro do mercado. Menos garantias, mais lucro.</p>
+            </div>
+          </div>
+        </div>
       </section>
 
-      <section className="image-section" aria-label="Marcas autorizadas">
-        <img
-          src={secaoLogos.url}
-          alt="Distribuidor autorizado das marcas Pegasus, Tortuga, Vipal, Vulcaflex e FVA"
-          width={1915}
-          height={306}
-          decoding="async"
-          draggable={false}
-          onContextMenu={(e) => e.preventDefault()}
-        />
+      <section className="logostrip-section" aria-label="Marcas autorizadas">
+        <div className="container">
+          <h2 className="logostrip-title animate-on-scroll animate-fade-in-up">Distribuidor autorizado das marcas que o seu cliente exige.</h2>
+          <div className="logostrip">
+            <img src={logoPegasus} alt="Pegasus" width={1330} height={1491} decoding="async" draggable={false} onContextMenu={(e) => e.preventDefault()} />
+            <img src={logoTortuga} alt="Tortuga" width={1693} height={715} decoding="async" draggable={false} onContextMenu={(e) => e.preventDefault()} />
+            <img src={logoFva} alt="FVA" width={1557} height={539} decoding="async" draggable={false} onContextMenu={(e) => e.preventDefault()} />
+            <img src={logoVipal} alt="Vipal" width={1679} height={554} decoding="async" draggable={false} onContextMenu={(e) => e.preventDefault()} />
+            <img src={logoVulcaflex} alt="Vulcaflex" width={1763} height={643} decoding="async" draggable={false} onContextMenu={(e) => e.preventDefault()} />
+          </div>
+        </div>
       </section>
 
 
