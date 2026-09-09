@@ -1,5 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
+import logoPegasus from "@/assets/logos/pegasus.png";
+import logoTortuga from "@/assets/logos/tortuga.png";
+import logoFva from "@/assets/logos/fva.png";
+import logoVipal from "@/assets/logos/vipal.png";
+import logoVulcaflex from "@/assets/logos/vulcaflex.png";
 
 const css = `
 :root {
@@ -752,11 +757,11 @@ function Index() {
         <div className="container">
           <h2 className="logostrip-title animate-on-scroll animate-fade-in-up">Distribuidor autorizado das marcas que o seu cliente exige.</h2>
           <div className="logostrip">
-            <img src="https://i.ibb.co/VWKfj7Z0/Logotipo-logomarca-assess-rios-de-Luxo-2.png" alt="Pegasus" decoding="async" draggable={false} onContextMenu={(e) => e.preventDefault()} />
-            <img src="https://i.ibb.co/HLKTR0CG/Logotipo-logomarca-assess-rios-de-Luxo-1.png" alt="Tortuga" decoding="async" draggable={false} onContextMenu={(e) => e.preventDefault()} />
-            <img src="https://i.ibb.co/Z1xymGff/Logotipo-logomarca-assess-rios-de-Luxo-3.png" alt="FVA" decoding="async" draggable={false} onContextMenu={(e) => e.preventDefault()} />
-            <img src="https://i.ibb.co/VYb7rwb5/Logotipo-logomarca-assess-rios-de-Luxo-5.png" alt="Vipal" decoding="async" draggable={false} onContextMenu={(e) => e.preventDefault()} />
-            <img src="https://i.ibb.co/m5hKtXx4/Logotipo-logomarca-assess-rios-de-Luxo-4.png" alt="Vulcaflex" decoding="async" draggable={false} onContextMenu={(e) => e.preventDefault()} />
+            <img src={logoPegasus} alt="Pegasus" width={1330} height={1491} decoding="async" draggable={false} onContextMenu={(e) => e.preventDefault()} />
+            <img src={logoTortuga} alt="Tortuga" width={1693} height={715} decoding="async" draggable={false} onContextMenu={(e) => e.preventDefault()} />
+            <img src={logoFva} alt="FVA" width={1557} height={539} decoding="async" draggable={false} onContextMenu={(e) => e.preventDefault()} />
+            <img src={logoVipal} alt="Vipal" width={1679} height={554} decoding="async" draggable={false} onContextMenu={(e) => e.preventDefault()} />
+            <img src={logoVulcaflex} alt="Vulcaflex" width={1763} height={643} decoding="async" draggable={false} onContextMenu={(e) => e.preventDefault()} />
           </div>
         </div>
       </section>
