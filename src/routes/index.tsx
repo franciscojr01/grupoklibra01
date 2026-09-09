@@ -701,40 +701,73 @@ function Index() {
         </div>
       </section>
 
-      <section className="image-section" aria-label="Problemas que a K-Libra resolve">
-        <img
-          src={secaoProblemas.url}
-          alt="Você está perdendo dinheiro para a internet ou para o concorrente vizinho? Falta de estoque, guerra de preços e retornos"
-          width={1911}
-          height={770}
-          decoding="async"
-          draggable={false}
-          onContextMenu={(e) => e.preventDefault()}
-        />
+      <section className="pain-section section-padding" aria-label="Problemas que a K-Libra resolve">
+        <svg className="pain-deco" viewBox="0 0 500 500" fill="none" aria-hidden="true">
+          <path d="M20 480 L180 200 L320 340 L480 60" stroke="#FC5A00" strokeWidth="2" opacity="0.35" />
+          <path d="M60 500 L220 240" stroke="#FC5A00" strokeWidth="2" opacity="0.2" />
+        </svg>
+        <div className="container">
+          <h2 className="pain-heading animate-on-scroll animate-fade-in-up">
+            Você está perdendo dinheiro para a internet
+            <span>OU PARA O CONCORRENTE VIZINHO?</span>
+          </h2>
+          <div className="pain-grid">
+            <div className="pain-card animate-on-scroll animate-fade-in-up stagger-1">
+              <i className="fa-solid fa-xmark pain-icon"></i>
+              <h3>Falta de Estoque na Safra:</h3>
+              <p>Esperar 15 dias por um distribuidor nacional custa clientes.</p>
+            </div>
+            <div className="pain-card animate-on-scroll animate-fade-in-up stagger-2">
+              <i className="fa-solid fa-xmark pain-icon"></i>
+              <h3>Guerra de Preços:</h3>
+              <p>É impossível lucrar se você compra mais caro que o preço do Mercado Livre.</p>
+            </div>
+            <div className="pain-card animate-on-scroll animate-fade-in-up stagger-3">
+              <i className="fa-solid fa-xmark pain-icon"></i>
+              <h3>Retornos e Garantia:</h3>
+              <p>Vender produtos sem procedência gera dor de cabeça com o produtor rural.</p>
+            </div>
+          </div>
+        </div>
       </section>
 
-      <section className="image-section" aria-label="A parceria estratégica que blinda o seu estoque">
-        <img
-          src={secaoParceria.url}
-          alt="A parceria estratégica que blinda o seu estoque: poder de compra massivo, logística própria e zero reclamação técnica"
-          width={1911}
-          height={770}
-          decoding="async"
-          draggable={false}
-          onContextMenu={(e) => e.preventDefault()}
-        />
+      <section className="partner-section section-padding" aria-label="A parceria estratégica que blinda o seu estoque">
+        <div className="container">
+          <h2 className="partner-heading animate-on-scroll animate-fade-in-up">
+            <span className="line-1">A Parceria Estratégica</span>
+            <span className="line-2">Que Blinda o Seu Estoque</span>
+          </h2>
+          <div className="partner-grid">
+            <div className="partner-card animate-on-scroll animate-fade-in-up stagger-1">
+              <i className="fa-solid fa-check"></i>
+              <h3>Poder de Compra Massivo:</h3>
+              <p>Operamos grandes volumes para garantir a você preço de distribuidor master.</p>
+            </div>
+            <div className="partner-card animate-on-scroll animate-fade-in-up stagger-2">
+              <i className="fa-solid fa-check"></i>
+              <h3>Logística Própria:</h3>
+              <p>Você pede, nós despachamos direto para a sua loja com agilidade na porta.</p>
+            </div>
+            <div className="partner-card animate-on-scroll animate-fade-in-up stagger-3">
+              <i className="fa-solid fa-check"></i>
+              <h3>Zero Reclamação Técnica:</h3>
+              <p>Trabalhamos apenas com o padrão ouro do mercado. Menos garantias, mais lucro.</p>
+            </div>
+          </div>
+        </div>
       </section>
 
-      <section className="image-section" aria-label="Marcas autorizadas">
-        <img
-          src={secaoLogos.url}
-          alt="Distribuidor autorizado das marcas Pegasus, Tortuga, Vipal, Vulcaflex e FVA"
-          width={1915}
-          height={306}
-          decoding="async"
-          draggable={false}
-          onContextMenu={(e) => e.preventDefault()}
-        />
+      <section className="logostrip-section" aria-label="Marcas autorizadas">
+        <div className="container">
+          <h2 className="logostrip-title animate-on-scroll animate-fade-in-up">Distribuidor autorizado das marcas que o seu cliente exige.</h2>
+          <div className="logostrip">
+            <img src="https://i.ibb.co/VWKfj7Z0/Logotipo-logomarca-assess-rios-de-Luxo-2.png" alt="Pegasus" loading="lazy" decoding="async" draggable={false} onContextMenu={(e) => e.preventDefault()} />
+            <img src="https://i.ibb.co/HLKTR0CG/Logotipo-logomarca-assess-rios-de-Luxo-1.png" alt="Tortuga" loading="lazy" decoding="async" draggable={false} onContextMenu={(e) => e.preventDefault()} />
+            <img src="https://i.ibb.co/Z1xymGff/Logotipo-logomarca-assess-rios-de-Luxo-3.png" alt="FVA" loading="lazy" decoding="async" draggable={false} onContextMenu={(e) => e.preventDefault()} />
+            <img src="https://i.ibb.co/VYb7rwb5/Logotipo-logomarca-assess-rios-de-Luxo-5.png" alt="Vipal" loading="lazy" decoding="async" draggable={false} onContextMenu={(e) => e.preventDefault()} />
+            <img src="https://i.ibb.co/m5hKtXx4/Logotipo-logomarca-assess-rios-de-Luxo-4.png" alt="Vulcaflex" loading="lazy" decoding="async" draggable={false} onContextMenu={(e) => e.preventDefault()} />
+          </div>
+        </div>
       </section>
 
 
