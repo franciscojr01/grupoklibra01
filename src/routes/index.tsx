@@ -1,8 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import secaoProblemas from "@/assets/secao-problemas.png.asset.json";
-import secaoParceria from "@/assets/secao-parceria.png.asset.json";
-import secaoLogos from "@/assets/secao-logos.png.asset.json";
 
 const css = `
 :root {
@@ -563,20 +560,14 @@ header { animation: fadeInDown 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
   .kl .logostrip-title { font-size: 1.15rem; }
 }
 
-/* ===== Seções substituídas por imagens (bloqueadas) ===== */
-.kl .image-section {
-  width: 100%;
-  line-height: 0;
-  display: block;
-  overflow: hidden;
-}
-.kl .image-section img {
-  width: 100%;
-  height: auto;
-  display: block;
-  user-select: none;
-  -webkit-user-drag: none;
+/* ===== Decoração da seção de problemas ===== */
+.kl .pain-deco {
+  position: absolute; left: -40px; bottom: -60px; width: 480px; height: 480px;
   pointer-events: none;
+}
+.kl .pain-heading span { display: block; font-size: 1.15em; margin-top: 6px; }
+@media (max-width: 640px) {
+  .kl .pain-deco { width: 300px; height: 300px; opacity: 0.6; }
 }
 `;
 
