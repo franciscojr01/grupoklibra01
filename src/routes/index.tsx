@@ -752,11 +752,11 @@ function Index() {
         <div className="container">
           <h2 className="logostrip-title animate-on-scroll animate-fade-in-up">Distribuidor autorizado das marcas que o seu cliente exige.</h2>
           <div className="logostrip">
-            <img src="https://i.ibb.co/VWKfj7Z0/Logotipo-logomarca-assess-rios-de-Luxo-2.png" alt="Pegasus" loading="lazy" decoding="async" draggable={false} onContextMenu={(e) => e.preventDefault()} />
-            <img src="https://i.ibb.co/HLKTR0CG/Logotipo-logomarca-assess-rios-de-Luxo-1.png" alt="Tortuga" loading="lazy" decoding="async" draggable={false} onContextMenu={(e) => e.preventDefault()} />
-            <img src="https://i.ibb.co/Z1xymGff/Logotipo-logomarca-assess-rios-de-Luxo-3.png" alt="FVA" loading="lazy" decoding="async" draggable={false} onContextMenu={(e) => e.preventDefault()} />
-            <img src="https://i.ibb.co/VYb7rwb5/Logotipo-logomarca-assess-rios-de-Luxo-5.png" alt="Vipal" loading="lazy" decoding="async" draggable={false} onContextMenu={(e) => e.preventDefault()} />
-            <img src="https://i.ibb.co/m5hKtXx4/Logotipo-logomarca-assess-rios-de-Luxo-4.png" alt="Vulcaflex" loading="lazy" decoding="async" draggable={false} onContextMenu={(e) => e.preventDefault()} />
+            <img src="https://i.ibb.co/VWKfj7Z0/Logotipo-logomarca-assess-rios-de-Luxo-2.png" alt="Pegasus" decoding="async" draggable={false} onContextMenu={(e) => e.preventDefault()} />
+            <img src="https://i.ibb.co/HLKTR0CG/Logotipo-logomarca-assess-rios-de-Luxo-1.png" alt="Tortuga" decoding="async" draggable={false} onContextMenu={(e) => e.preventDefault()} />
+            <img src="https://i.ibb.co/Z1xymGff/Logotipo-logomarca-assess-rios-de-Luxo-3.png" alt="FVA" decoding="async" draggable={false} onContextMenu={(e) => e.preventDefault()} />
+            <img src="https://i.ibb.co/VYb7rwb5/Logotipo-logomarca-assess-rios-de-Luxo-5.png" alt="Vipal" decoding="async" draggable={false} onContextMenu={(e) => e.preventDefault()} />
+            <img src="https://i.ibb.co/m5hKtXx4/Logotipo-logomarca-assess-rios-de-Luxo-4.png" alt="Vulcaflex" decoding="async" draggable={false} onContextMenu={(e) => e.preventDefault()} />
           </div>
         </div>
       </section>
