@@ -198,7 +198,7 @@ header { animation: fadeInDown 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
 .kl .card h3 { font-size: 1.25rem; margin-bottom: 15px; color: var(--primary-black); }
 .kl .thesis {
   background: linear-gradient(90deg, var(--primary-black) 0%, var(--secondary-graphite) 100%);
-  border-left: 8px solid var(--primary-orange); position: relative; overflow: hidden;
+  position: relative; overflow: hidden;
 }
 .kl .thesis::after {
   content: '>>'; position: absolute; right: -20px; bottom: -40px; font-size: 15rem;
