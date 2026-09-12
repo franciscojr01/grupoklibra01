@@ -5,6 +5,8 @@ import logoTortuga from "@/assets/logos/tortuga.png";
 import logoFva from "@/assets/logos/fva.png";
 import logoVipal from "@/assets/logos/vipal.png";
 import logoVulcaflex from "@/assets/logos/vulcaflex.png";
+import negativeIcon from "@/assets/icons/negative.png";
+import positiveIcon from "@/assets/icons/positive.png";
 
 const css = `
 :root {
@@ -702,17 +704,17 @@ function Index() {
           </h2>
           <div className="pain-grid">
             <div className="pain-card animate-on-scroll animate-fade-in-up stagger-1">
-              <img className="pain-icon" src="https://i.ibb.co/q3rYJ1T4/image.png" alt="" aria-hidden="true" />
+              <img className="pain-icon" src={negativeIcon} alt="" aria-hidden="true" />
               <h3>Falta de Estoque na Safra:</h3>
               <p>Esperar 15 dias por um distribuidor nacional custa clientes.</p>
             </div>
             <div className="pain-card animate-on-scroll animate-fade-in-up stagger-2">
-              <img className="pain-icon" src="https://i.ibb.co/q3rYJ1T4/image.png" alt="" aria-hidden="true" />
+              <img className="pain-icon" src={negativeIcon} alt="" aria-hidden="true" />
               <h3>Guerra de Preços:</h3>
               <p>É impossível lucrar se você compra mais caro que o preço do Mercado Livre.</p>
             </div>
             <div className="pain-card animate-on-scroll animate-fade-in-up stagger-3">
-              <img className="pain-icon" src="https://i.ibb.co/q3rYJ1T4/image.png" alt="" aria-hidden="true" />
+              <img className="pain-icon" src={negativeIcon} alt="" aria-hidden="true" />
               <h3>Retornos e Garantia:</h3>
               <p>Vender produtos sem procedência gera dor de cabeça com o produtor rural.</p>
             </div>
@@ -728,17 +730,17 @@ function Index() {
           </h2>
           <div className="partner-grid">
             <div className="partner-card animate-on-scroll animate-fade-in-up stagger-1">
-              <img className="partner-icon" src="https://i.ibb.co/PGGbvg1P/image.png" alt="" aria-hidden="true" />
+              <img className="partner-icon" src={positiveIcon} alt="" aria-hidden="true" />
               <h3>Poder de Compra Massivo:</h3>
               <p>Operamos grandes volumes para garantir a você preço de distribuidor master.</p>
             </div>
             <div className="partner-card animate-on-scroll animate-fade-in-up stagger-2">
-              <img className="partner-icon" src="https://i.ibb.co/PGGbvg1P/image.png" alt="" aria-hidden="true" />
+              <img className="partner-icon" src={positiveIcon} alt="" aria-hidden="true" />
               <h3>Logística Própria:</h3>
               <p>Você pede, nós despachamos direto para a sua loja com agilidade na porta.</p>
             </div>
             <div className="partner-card animate-on-scroll animate-fade-in-up stagger-3">
-              <img className="partner-icon" src="https://i.ibb.co/PGGbvg1P/image.png" alt="" aria-hidden="true" />
+              <img className="partner-icon" src={positiveIcon} alt="" aria-hidden="true" />
               <h3>Zero Reclamação Técnica:</h3>
               <p>Trabalhamos apenas com o padrão ouro do mercado. Menos garantias, mais lucro.</p>
             </div>
