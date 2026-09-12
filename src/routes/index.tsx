@@ -129,12 +129,12 @@ header { animation: fadeInDown 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
 }
 .kl .btn-secondary:hover { background-color: var(--primary-white); color: var(--primary-black); }
 .kl header {
-  background-color: var(--primary-black); padding: 8px 0; position: fixed;
+  background-color: var(--primary-black); padding: 4px 0; position: fixed;
   width: 100%; top: 0; z-index: 1000; border-bottom: 2px solid var(--primary-orange);
 }
 .kl .nav-container { display: flex; justify-content: space-between; align-items: center; }
-.kl .brand-logo { display: flex; align-items: center; text-decoration: none; padding: 2px 0; }
-.kl .brand-logo img { height: 80px; width: auto; display: block; object-fit: contain; }
+.kl .brand-logo { display: flex; align-items: center; text-decoration: none; padding: 0; }
+.kl .brand-logo img { height: 68px; width: auto; display: block; object-fit: contain; }
 .kl .menu-toggle {
   display: none; background: transparent; border: none; color: var(--primary-white);
   font-size: 1.6rem; line-height: 1; padding: 8px; cursor: pointer;
@@ -504,8 +504,8 @@ header { animation: fadeInDown 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
   .kl .nav-links,
   .kl .header-cta { display: none; }
   .kl .menu-toggle { display: block; }
-  .kl .brand-logo img { height: 56px; }
-  .kl header { padding: 6px 0; }
+  .kl .brand-logo img { height: 52px; }
+  .kl header { padding: 3px 0; }
 }
 
 /* ===== Parceria Estratégica (fundo laranja) ===== */
