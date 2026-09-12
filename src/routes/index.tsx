@@ -236,7 +236,7 @@ header { animation: fadeInDown 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
   transform: translateY(-6px); border-color: var(--primary-orange);
   box-shadow: 0 18px 40px -18px rgba(252, 90, 0, 0.35);
 }
-.kl .pain-icon { color: var(--primary-orange); font-size: 3.2rem; margin-bottom: 26px; }
+.kl .pain-icon { width: 3.2rem; height: 3.2rem; object-fit: contain; margin-bottom: 26px; }
 .kl .pain-card h3 {
   color: var(--primary-white); font-size: 1.15rem; line-height: 1.35;
   margin-bottom: 18px; text-transform: none; font-style: normal; font-weight: 800;
@@ -456,7 +456,7 @@ header { animation: fadeInDown 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
 }
 .kl .form-control:focus { outline: none; border-color: var(--primary-orange); background-color: var(--primary-white); }
 .kl .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
-.kl .btn-full { width: 100%; padding: 20px; }
+.kl .btn-full { width: 100%; padding: 14px 20px; height: auto; text-align: center; }
 .kl .whatsapp-float {
   position: fixed; bottom: 30px; right: 30px; width: 60px; height: 60px;
   background-color: #25d366; color: #FFF; border-radius: 50px; text-align: center;
@@ -531,7 +531,7 @@ header { animation: fadeInDown 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .kl .partner-card:hover { transform: translateY(-6px); box-shadow: 0 26px 50px -20px rgba(0,0,0,0.55); }
-.kl .partner-card i { color: var(--primary-white); font-size: 2.6rem; margin-bottom: 30px; }
+.kl .partner-icon { width: 2.6rem; height: 2.6rem; object-fit: contain; margin-bottom: 30px; }
 .kl .partner-card h3 {
   color: var(--primary-orange); font-size: 1.15rem; line-height: 1.35;
   margin-bottom: 20px; text-transform: none; font-style: normal; font-weight: 800;
@@ -554,11 +554,11 @@ header { animation: fadeInDown 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
 }
 .kl .logostrip img {
   height: 74px; width: auto; max-width: 190px; object-fit: contain;
-  filter: grayscale(100%) contrast(1.15); opacity: 0.9;
+  filter: brightness(0) saturate(100%) invert(4%) sepia(1%) saturate(104%) hue-rotate(314deg) brightness(96%) contrast(99%); opacity: 1;
   user-select: none; -webkit-user-drag: none;
   transition: opacity 0.3s ease, filter 0.3s ease;
 }
-.kl .logostrip img:hover { filter: grayscale(0%); opacity: 1; }
+.kl .logostrip img:hover { filter: brightness(0) saturate(100%) invert(4%) sepia(1%) saturate(104%) hue-rotate(314deg) brightness(96%) contrast(99%); opacity: 1; }
 @media (max-width: 640px) {
   .kl .logostrip { gap: 34px 40px; }
   .kl .logostrip img { height: 52px; max-width: 130px; }
@@ -646,7 +646,7 @@ function Index() {
           <nav>
             <ul className="nav-links">
               <li><a href="#produtos">Produtos</a></li>
-              <li><a href="#marcas">Marcas Parceiras</a></li>
+              <li><a href="#marcas-parceiras">Marcas Parceiras</a></li>
               <li><a href="#porque">A K-Libra</a></li>
               <li><a href="#formulario">Contato</a></li>
             </ul>
@@ -665,7 +665,7 @@ function Index() {
         <div className="container">
           <ul className={`mobile-menu${menuOpen ? " open" : ""}`}>
             <li><a href="#produtos" onClick={() => setMenuOpen(false)}>Produtos</a></li>
-            <li><a href="#marcas" onClick={() => setMenuOpen(false)}>Marcas Parceiras</a></li>
+            <li><a href="#marcas-parceiras" onClick={() => setMenuOpen(false)}>Marcas Parceiras</a></li>
             <li><a href="#porque" onClick={() => setMenuOpen(false)}>A K-Libra</a></li>
             <li><a href="#formulario" onClick={() => setMenuOpen(false)}>Contato</a></li>
           </ul>
@@ -675,11 +675,11 @@ function Index() {
       <section className="hero">
         <div className="container">
           <div className="hero-content">
-            <h1>SUA REVENDA ABASTECIDA.<br /><span>SUA MARGEM PROTEGIDA.</span></h1>
+            <h1>PREÇO DE FÁBRICA NA SUA PORTA.<br /><span>MARGEM DE LUCRO PROTEGIDA NO SEU BOLSO.</span></h1>
             <p>Pneus, câmaras de ar e materiais de reparação para revendas, borracharias e oficinas que precisam de disponibilidade, condições competitivas e reposição ágil.</p>
             <div className="hero-btns">
               <a href="#formulario" className="btn btn-green">Solicitar Tabela B2B</a>
-              <a href="#produtos" className="btn btn-secondary">Ver Produtos B2B</a>
+              <a href="#produtos" className="btn btn-secondary">Ver Produtos</a>
             </div>
             <div className="hero-indicators">
               <div className="indicator-item"><i className="fa-solid fa-truck-fast"></i> DISTRIBUIÇÃO B2B</div>
@@ -687,13 +687,6 @@ function Index() {
               <div className="indicator-item"><i className="fa-solid fa-boxes-stacked"></i> PORTFÓLIO ESTRATÉGICO</div>
             </div>
           </div>
-        </div>
-      </section>
-
-      <section className="section-padding bg-dark thesis animate-on-scroll animate-fade-in" id="sobre">
-        <div className="container">
-          <h2>VOCÊ NÃO VENDE APENAS PRODUTO.<br />VOCÊ VENDE DISPONIBILIDADE.</h2>
-          <p>Ter o produto certo no momento certo é a diferença entre fechar o negócio ou perder o cliente. A K-Libra é a distribuidora que garante sua reposição, protege sua margem e elimina riscos no abastecimento da sua revenda.</p>
         </div>
       </section>
 
@@ -709,17 +702,17 @@ function Index() {
           </h2>
           <div className="pain-grid">
             <div className="pain-card animate-on-scroll animate-fade-in-up stagger-1">
-              <i className="fa-solid fa-xmark pain-icon"></i>
+              <img className="pain-icon" src="https://i.ibb.co/q3rYJ1T4/image.png" alt="" aria-hidden="true" />
               <h3>Falta de Estoque na Safra:</h3>
               <p>Esperar 15 dias por um distribuidor nacional custa clientes.</p>
             </div>
             <div className="pain-card animate-on-scroll animate-fade-in-up stagger-2">
-              <i className="fa-solid fa-xmark pain-icon"></i>
+              <img className="pain-icon" src="https://i.ibb.co/q3rYJ1T4/image.png" alt="" aria-hidden="true" />
               <h3>Guerra de Preços:</h3>
               <p>É impossível lucrar se você compra mais caro que o preço do Mercado Livre.</p>
             </div>
             <div className="pain-card animate-on-scroll animate-fade-in-up stagger-3">
-              <i className="fa-solid fa-xmark pain-icon"></i>
+              <img className="pain-icon" src="https://i.ibb.co/q3rYJ1T4/image.png" alt="" aria-hidden="true" />
               <h3>Retornos e Garantia:</h3>
               <p>Vender produtos sem procedência gera dor de cabeça com o produtor rural.</p>
             </div>
@@ -735,17 +728,17 @@ function Index() {
           </h2>
           <div className="partner-grid">
             <div className="partner-card animate-on-scroll animate-fade-in-up stagger-1">
-              <i className="fa-solid fa-check"></i>
+              <img className="partner-icon" src="https://i.ibb.co/PGGbvg1P/image.png" alt="" aria-hidden="true" />
               <h3>Poder de Compra Massivo:</h3>
               <p>Operamos grandes volumes para garantir a você preço de distribuidor master.</p>
             </div>
             <div className="partner-card animate-on-scroll animate-fade-in-up stagger-2">
-              <i className="fa-solid fa-check"></i>
+              <img className="partner-icon" src="https://i.ibb.co/PGGbvg1P/image.png" alt="" aria-hidden="true" />
               <h3>Logística Própria:</h3>
               <p>Você pede, nós despachamos direto para a sua loja com agilidade na porta.</p>
             </div>
             <div className="partner-card animate-on-scroll animate-fade-in-up stagger-3">
-              <i className="fa-solid fa-check"></i>
+              <img className="partner-icon" src="https://i.ibb.co/PGGbvg1P/image.png" alt="" aria-hidden="true" />
               <h3>Zero Reclamação Técnica:</h3>
               <p>Trabalhamos apenas com o padrão ouro do mercado. Menos garantias, mais lucro.</p>
             </div>
@@ -753,7 +746,7 @@ function Index() {
         </div>
       </section>
 
-      <section className="logostrip-section" aria-label="Marcas autorizadas">
+      <section id="marcas-parceiras" className="logostrip-section" aria-label="Marcas autorizadas">
         <div className="container">
           <h2 className="logostrip-title animate-on-scroll animate-fade-in-up">Distribuidor autorizado das marcas que o seu cliente exige.</h2>
           <div className="logostrip">
@@ -950,46 +943,35 @@ function Index() {
               <form action="#" method="POST">
                 <div className="form-group">
                   <label htmlFor="nome">Nome Completo</label>
-                  <input type="text" id="nome" name="nome" className="form-control" required placeholder="Seu nome" maxLength={100} />
+                  <input type="text" id="nome" name="nome" className="form-control" required placeholder="Seu nome completo" maxLength={100} />
                 </div>
                 <div className="form-row">
                   <div className="form-group">
-                    <label htmlFor="empresa">Empresa</label>
-                    <input type="text" id="empresa" name="empresa" className="form-control" required placeholder="Nome da sua empresa" maxLength={120} />
+                    <label htmlFor="whatsapp">Whatsapp</label>
+                    <input type="tel" id="whatsapp" name="whatsapp" className="form-control" required placeholder="(00) 00000-0000" maxLength={20} />
                   </div>
                   <div className="form-group">
-                    <label htmlFor="whatsapp">WhatsApp</label>
-                    <input type="tel" id="whatsapp" name="whatsapp" className="form-control" required placeholder="(77) 90000-0000" maxLength={20} />
+                    <label htmlFor="email">E-mail</label>
+                    <input type="email" id="email" name="email" className="form-control" required placeholder="seu@email.com" maxLength={120} />
                   </div>
                 </div>
                 <div className="form-row">
                   <div className="form-group">
-                    <label htmlFor="cidade">Cidade/UF</label>
-                    <input type="text" id="cidade" name="cidade" className="form-control" required placeholder="Sua cidade - BA" maxLength={80} />
+                    <label htmlFor="cnpj">CNPJ</label>
+                    <input type="text" id="cnpj" name="cnpj" className="form-control" required placeholder="00.000.000/0001-00" maxLength={18} />
                   </div>
                   <div className="form-group">
-                    <label htmlFor="negocio">Tipo de Negócio</label>
-                    <select id="negocio" name="negocio" className="form-control" required defaultValue="">
+                    <label htmlFor="faturamento">Faturamento Médio Mensal</label>
+                    <select id="faturamento" name="faturamento" className="form-control" required defaultValue="">
                       <option value="">Selecione...</option>
-                      <option value="Revenda">Revenda / Loja de Pneus</option>
-                      <option value="Borracharia">Borracharia</option>
-                      <option value="Oficina">Oficina Mecânica</option>
-                      <option value="Outro">Outro segmento B2B</option>
+                      <option value="ate-20-mil">Até R$ 20 mil</option>
+                      <option value="20-a-50-mil">De R$ 20 mil a R$ 50 mil</option>
+                      <option value="50-a-100-mil">De R$ 50 mil a R$ 100 mil</option>
+                      <option value="acima-100-mil">Acima de R$ 100 mil</option>
                     </select>
                   </div>
                 </div>
-                <div className="form-group">
-                  <label htmlFor="interesse">Produtos de Interesse</label>
-                  <select id="interesse" name="interesse" className="form-control" required defaultValue="">
-                    <option value="">Selecione...</option>
-                    <option value="Motos">Pneus de Moto</option>
-                    <option value="Camaras">Câmaras de Ar</option>
-                    <option value="Reparos">Reparos &amp; Vulcanização</option>
-                    <option value="Acessorios">Acessórios &amp; Suprimentos</option>
-                    <option value="Todos">Mix Completo</option>
-                  </select>
-                </div>
-                <button type="submit" className="btn btn-green btn-full animate-on-scroll animate-fade-in-up"><span className="graphic-arrows">&gt;&gt;</span> SOLICITAR TABELA B2B</button>
+                <button type="submit" className="btn btn-green btn-full animate-on-scroll animate-fade-in-up">SOLICITAR TABELA B2B</button>
               </form>
             </div>
           </div>
@@ -1008,8 +990,7 @@ function Index() {
 
       <footer className="animate-on-scroll animate-fade-in">
         <div className="container text-center">
-          <p><strong>K-LIBRA ARTEFATOS DE BORRACHA</strong> — Sua parceira de abastecimento B2B.</p>
-          <p style={{ marginTop: 8, fontSize: "0.8rem" }}>&copy; Todos os direitos reservados. Aplicação exclusiva para o mercado corporativo B2B.</p>
+          <p>K-Libra Artefatos da Borracha @ 2026. Todos os direitos reservados.</p>
         </div>
       </footer>
     </div>
