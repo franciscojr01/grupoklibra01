@@ -7,4 +7,4 @@
 
 ## Em andamento / pendentes
 
-2. **Criar um mini app** — aguardando respostas sobre propósito, local, funcionalidades e persistência.
+Nenhuma tarefa pendente.
